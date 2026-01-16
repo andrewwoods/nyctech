@@ -5,6 +5,36 @@ Author URI: http://andrewwoods.net/
 Version: 1.0.0
 Description: A 2026 fork of my Aquatech theme, updated for New York, my forever city.
 */
+
+:root {
+
+  /*
+   * Grayscale Colors
+   * ================
+   *
+   * Gray is a color
+   * Grey is a colour
+   */
+  --gray90: #ebebeb;
+  --grey90: #ebebeb;
+  --gray80: #d7d7d7;
+  --grey80: #d7d7d7;
+  --gray70: #c2c2c2;
+  --grey70: #c2c2c2;
+  --gray60: #acacac;
+  --grey60: #acacac;
+  --gray50: #959595;
+  --grey50: #959595;
+  --gray40: #7d7d7d;
+  --grey40: #7d7d7d;
+  --gray30: #626262;
+  --grey30: #626262;
+  --gray20: #464646;
+  --grey20: #464646;
+  --gray10: #262626;
+  --grey10: #262626;
+}
+
 /* line 5, sass/lib/_formatting.scss */
 a h1,
 a h2,
@@ -173,15 +203,15 @@ ol {
 
 /* line 84, sass/lib/_formatting.scss */
 .shaded {
-  background-color: #ebebeb;
+  background-color: var(--gray90);
 }
 /* line 87, sass/lib/_formatting.scss */
 .shaded .medium {
-  background-color: #c2c2c2;
+  background-color: var(--gray90);
 }
 /* line 91, sass/lib/_formatting.scss */
 .shaded .dark {
-  background-color: #262626;
+  background-color: var(--gray10);
   color: #ffffff;
 }
 
@@ -340,31 +370,31 @@ text-right {
 
 /* line 81, sass/style.scss */
 ::-moz-selection {
-  color: #ebebeb;
+  color: var(--gray90);
   background-color: #ff6060;
 }
 
 /* line 82, sass/style.scss */
 ::-webkit-selection {
-  color: #ebebeb;
+  color: var(--gray90);
   background-color: #ff6060;
 }
 
 /* line 83, sass/style.scss */
 ::-o-selection {
-  color: #ebebeb;
+  color: var(--gray90);
   background-color: #ff6060;
 }
 
 /* line 84, sass/style.scss */
 ::-ms-selection {
-  color: #ebebeb;
+  color: var(--gray90);
   background-color: #ff6060;
 }
 
 /* line 85, sass/style.scss */
 ::selection {
-  color: #ebebeb;
+  color: var(--gray90);
   background-color: #ff6060;
 }
 
@@ -402,14 +432,14 @@ a:focus {
 
 /* line 119, sass/style.scss */
 acronym {
-  border-bottom: 1px dashed #d7d7d7;
+  border-bottom: 1px dashed var(--gray80);
   color: #0FA2CD;
   font-size: inherit;
 }
 
 /* line 126, sass/style.scss */
 body {
-  background-color: #acacac;
+  background-color: var(--gray60);
   color: #f0f0f0;
   font-size: 20px;
 }
@@ -687,10 +717,10 @@ input[type=submit] {
   margin-left: auto;
   margin-right: auto;
   padding: 0.5em;
-  border-top: 2px solid #626262;
-  border-right: 2px solid #acacac;
-  border-bottom: 2px solid #d7d7d7;
-  border-left: 2px solid #7d7d7d;
+  border-top: 2px solid var(--gray30);
+  border-right: 2px solid var(--gray90);
+  border-bottom: 2px solid var(--gray80);
+  border-left: 2px solid var(--gray40);
 }
 
 /* line 379, sass/style.scss */
@@ -889,7 +919,7 @@ pre, .code {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  background-color: #262626;
+  background-color: var(--gray10);
   color: #f0f0f0;
   margin: 1em 0;
   padding: 0.5em;
@@ -925,7 +955,7 @@ td {
 th {
   padding: 0.5em;
   text-transform: uppercase;
-  background-color: #ebebeb;
+  background-color: var(--gray90);
   color: #064456;
 }
 
@@ -997,13 +1027,13 @@ textarea {
 
 /* line 692, sass/style.scss */
 .comment {
-  border-bottom: 1px solid #464646;
+  border-bottom: 1px solid var(--gray20);
   padding: 0.5em 0;
 }
 
 /* line 697, sass/style.scss */
 .comment.even {
-  border-bottom: 1px dashed #464646;
+  border-bottom: 1px dashed var(--gray20);
 }
 
 /* line 709, sass/style.scss */
@@ -1130,7 +1160,7 @@ textarea {
 /* line 795, sass/style.scss */
 .sticky-post {
   padding: 0.5em;
-  background-color: #ebebeb;
+  background-color: var(--gray90);
   color: #f0f0f0;
 }
 
@@ -1307,8 +1337,8 @@ nav.social-links a:hover, nav.social-links a:focus, nav.social-links a:active {
 
 /* line 966, sass/style.scss */
 .calls-to-action {
-  background-color: #464646;
-  color: #ebebeb;
+  background-color: var(--gray20);
+  color: var(--gray90);
   border-radius: 0.5em;
 }
 
@@ -1364,15 +1394,15 @@ nav.social-links a:hover, nav.social-links a:focus, nav.social-links a:active {
   /* line 3, sass/lib/_mobile.scss */
   body {
     /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#464646), to(#c2c2c2));
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(var(--gray20)), to(var(--gray90)));
     /* Safari 5.1, Chrome 10+ */
-    background: -webkit-linear-gradient(top, #c2c2c2, #464646);
+    background: -webkit-linear-gradient(top, var(--gray90), var(--gray20));
     /* Firefox 3.6+ */
-    background: -moz-linear-gradient(top, #c2c2c2, #464646);
+    background: -moz-linear-gradient(top, var(--gray90), var(--gray20));
     /* IE 10 */
-    background: -ms-linear-gradient(top, #c2c2c2, #464646);
+    background: -ms-linear-gradient(top, var(--gray90), var(--gray20));
     /* Opera 11.10+ */
-    background: -o-linear-gradient(top, #c2c2c2, #464646);
+    background: -o-linear-gradient(top, var(--gray90), var(--gray20));
   }
 
   /* line 20, sass/lib/_mobile.scss */

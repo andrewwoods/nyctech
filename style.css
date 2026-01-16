@@ -1489,8 +1489,7 @@ Desktop
 @media (min-width: 768px) {
   /* line 7, sass/lib/_desktop.scss */
   body {
-    /* background: url(img/seattle-night-2017-oct.jpg) no-repeat fixed center center; */
-    background: url(img/new-york-a-winter-swirl-2096x1080.jpg) no-repeat fixed center center;
+    background: url(img/seattle-night-2017-oct.jpg) no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

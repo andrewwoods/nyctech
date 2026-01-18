@@ -240,6 +240,13 @@ ol {
 	margin-left: 0;
 }
 
+p,
+ol,
+ul,
+li {
+	font-family: var(--sans-family);
+}
+
 .caps {
 	text-transform: uppercase;
 }

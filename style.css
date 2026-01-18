@@ -101,10 +101,10 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--sans-default: Verdana, sans-serif;
 	--sans-family: var(--sans1), var(--sans2), var(--sans-default);
 
-	--serif1: Didot, Didot LT STD;
-	--serif2: Hoefler Text, Garamond;
+	--serif-didot: Didot, "Didot LT STD";
+	--serif-times: "Times New Roman";
 	--serif-default: Georgia, serif;
-	--serif-family: var(--serif1), var(--serif2), var(--serif-default);
+	--serif-family: var(--serif-didot), var(--serif-times), var(--serif-default);
 
 	--fixed1: "Lucida Console", "Lucida Sans Typewriter";
 	--fixed2: Monaco, "Bitstream Vera Sans Mono";

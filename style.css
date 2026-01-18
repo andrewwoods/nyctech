@@ -833,16 +833,16 @@ nav a {
 
 nav a:link,
 nav a:visited {
-	background: var(--aqua7);
+	background: var(--gray10);
 	color: var(--white);
-	border: 1px solid var(--aqua3);
+	border: 1px solid var(--gray10);
 	border-radius: 8px;
 }
 
 nav a:hover,
 nav a:active,
 nav a:focus {
-	background: var(--red);
+	background: var(--selection-bgcolor);
 	color: var(--white);
 	border: 1px solid var(--white);
 }

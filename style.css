@@ -77,6 +77,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--amber5: #EF6238;
 	--amber6: #FF7F60;
+	--orange-dirty: #9A6009;
 
 
 	/*
@@ -141,7 +142,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--link-focus-bgcolor: var(--white);
 
 	--selection-color: var(--grey90);
-	--selection-bgcolor: var(--red-light);
+	--selection-bgcolor: var(--orange-dirty);
 
 	--h1-glow-text: var(--aqua6);
 	--h2-glow-text: var(--amber6);
@@ -485,7 +486,7 @@ text-right {
 
 ::selection {
 	color: var(--gray90);
-	background-color: var(--red-light);
+	background-color: var(--selection-bgcolor);
 }
 
 a {

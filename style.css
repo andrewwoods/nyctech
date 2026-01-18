@@ -152,7 +152,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 * {
 	margin: 0;
 	padding: 0;
-	line-height: 1.6em;
+	line-height: 1.25rem;
 	/* apply a natural box layout model to all elements */
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -1001,8 +1001,8 @@ code,
 	border-radius: 6px;
 	background-color: var(--gray10);
 	color: var(--white);
+	line-height: 1.25;
 	margin: 1em 0;
-	padding: var(--spacing-medium);
 	font-size: 0.9em;
 	font-family: var(--mono-family);
 	overflow-x: scroll;

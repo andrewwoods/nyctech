@@ -992,6 +992,7 @@ p.special strong {
 }
 
 pre,
+code,
 .code {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -1166,6 +1167,10 @@ textarea {
 
 .projects h2 {
 	margin-top: 0;
+}
+
+.publishing-info {
+	font-family: var(--mono-family);
 }
 
 .publishing-info img {

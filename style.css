@@ -824,8 +824,9 @@ nav a {
 	color: var(--white);
 	padding: var(--spacing-medium);
 	text-decoration: none;
+	text-transform: uppercase;
 	font-size: 1em;
-	font-family: var(--sans-family);
+	font-family: var(--serif-family);
 	width: 100%;
 }
 
@@ -1637,7 +1638,6 @@ Desktop
 	}
 
 	nav ul {
-		width: 660px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1678,7 +1678,7 @@ Desktop
 	}
 
 	#masthead {
-		width: 35rem;
+		width: 758px;
 		margin-left: auto;
 		margin-right: auto;
 		/* For modern browsers */

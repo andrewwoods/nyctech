@@ -63,6 +63,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--red: #BB4545;
 
 
+	--blue-dark: rgb(9, 60, 110);
 	--blue-dark-trans: rgba(9, 60, 110, var(--medium-opacity));
 	--aqua2: #064456;
 	--aqua2-trans: rgba(6, 68, 86, var(--medium-opacity));
@@ -414,7 +415,7 @@ text-right {
 }
 
 .boxed-aqua {
-	background: var(--blue-dark-trans);
+	background: var(--blue-dark);
 	border-radius: 16px;
 	border: none;
 }

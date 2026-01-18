@@ -15,24 +15,24 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 * Gray is a color
 	 * Grey is a colour
 	 */
-	--gray90: #ebebeb;
-	--grey90: #ebebeb;
-	--gray80: #d7d7d7;
-	--grey80: #d7d7d7;
-	--gray70: #c2c2c2;
-	--grey70: #c2c2c2;
-	--gray60: #acacac;
-	--grey60: #acacac;
-	--gray50: #959595;
-	--grey50: #959595;
-	--gray40: #7d7d7d;
-	--grey40: #7d7d7d;
-	--gray30: #626262;
-	--grey30: #626262;
-	--gray20: #464646;
-	--grey20: #464646;
-	--gray10: #262626;
-	--grey10: #262626;
+	--gray90: #e5e5e5;
+	--grey90: #e5e5e5;
+	--gray80: #cccccc;
+	--grey80: #cccccc;
+	--gray70: #b3b3b3;
+	--grey70: #b3b3b3;
+	--gray60: #999999;
+	--grey60: #999999;
+	--gray50: #7f7f7f;
+	--grey50: #7f7f7f;
+	--gray40: #666666;
+	--grey40: #666666;
+	--gray30: #4d4d4d;
+	--grey30: #4d4d4d;
+	--gray20: #333333;
+	--grey20: #333333;
+	--gray10: #1a1a1a;
+	--grey10: #1a1a1a;
 
 	/*
 	 * Opacity

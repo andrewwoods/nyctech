@@ -147,6 +147,16 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--h2-glow-text: var(--amber6);
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.6em;
+	/* apply a natural box layout model to all elements */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 /* END OF LEGEND */
 
 a h1,
@@ -445,16 +455,6 @@ text-right {
 	border: 0;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6em;
-	font-family: var(--sans-family);
-	/* apply a natural box layout model to all elements */
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 ::-moz-selection {
 	color: var(--gray90);

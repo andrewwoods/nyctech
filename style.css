@@ -149,6 +149,8 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--h2-glow-text: var(--amber6);
 }
 
+/* END OF LEGEND */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -159,41 +161,6 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	box-sizing: border-box;
 }
 
-/* END OF LEGEND */
-
-a h1,
-a h2,
-a h3,
-a h4,
-a h5,
-a h6 {
-	background-color: var(--debug-color1);
-	color: #000000;
-}
-
-a h1:after {
-	content: " BAD MARKUP! The A goes inside the H1";
-}
-
-a h2:after {
-	content: " BAD MARKUP! The A goes inside the H2";
-}
-
-a h3:after {
-	content: " BAD MARKUP! The A goes inside the H3";
-}
-
-a h4:after {
-	content: " BAD MARKUP! The A goes inside the H4";
-}
-
-a h5:after {
-	content: " BAD MARKUP! The A goes inside the H5";
-}
-
-a h6:after {
-	content: " BAD MARKUP! The A goes inside the H6";
-}
 
 a[href$=".pdf"]:after {
 	content: " (PDF)";
@@ -1571,7 +1538,6 @@ Desktop
 		width: 300px;
 		height: 300px;
 		position: relative;
-		webkit-transform-style: preserve-3d;
 		transform-style: preserve-3d;
 		transition: 0.5s;
 		color: var(--bright-white);
@@ -1599,7 +1565,7 @@ Desktop
 	}
 
 	.wrap .back {
-		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
 		background-color: var(--debug-color3);
 	}
 
@@ -1688,8 +1654,6 @@ Desktop
 		width: 758px;
 		margin-left: auto;
 		margin-right: auto;
-		/* For modern browsers */
-		/* For IE 6/7 (trigger hasLayout) */
 	}
 
 	#masthead:before,
@@ -1700,10 +1664,6 @@ Desktop
 
 	#masthead:after {
 		clear: both;
-	}
-
-	#masthead {
-		*zoom: 1;
 	}
 
 	.category-haiku .entry {

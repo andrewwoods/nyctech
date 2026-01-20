@@ -15,24 +15,24 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 * Gray is a color
 	 * Grey is a colour
 	 */
-	--gray90: #ebebeb;
-	--grey90: #ebebeb;
-	--gray80: #d7d7d7;
-	--grey80: #d7d7d7;
-	--gray70: #c2c2c2;
-	--grey70: #c2c2c2;
-	--gray60: #acacac;
-	--grey60: #acacac;
-	--gray50: #959595;
-	--grey50: #959595;
-	--gray40: #7d7d7d;
-	--grey40: #7d7d7d;
-	--gray30: #626262;
-	--grey30: #626262;
-	--gray20: #464646;
-	--grey20: #464646;
-	--gray10: #262626;
-	--grey10: #262626;
+	--gray90: #e5e5e5;
+	--grey90: #e5e5e5;
+	--gray80: #cccccc;
+	--grey80: #cccccc;
+	--gray70: #b3b3b3;
+	--grey70: #b3b3b3;
+	--gray60: #999999;
+	--grey60: #999999;
+	--gray50: #7f7f7f;
+	--grey50: #7f7f7f;
+	--gray40: #666666;
+	--grey40: #666666;
+	--gray30: #4d4d4d;
+	--grey30: #4d4d4d;
+	--gray20: #333333;
+	--grey20: #333333;
+	--gray10: #1a1a1a;
+	--grey10: #1a1a1a;
 
 	/*
 	 * Opacity
@@ -63,6 +63,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--red: #BB4545;
 
 
+	--blue-dark: rgb(9, 60, 110);
 	--blue-dark-trans: rgba(9, 60, 110, var(--medium-opacity));
 	--aqua2: #064456;
 	--aqua2-trans: rgba(6, 68, 86, var(--medium-opacity));
@@ -77,6 +78,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--amber5: #EF6238;
 	--amber6: #FF7F60;
+	--orange-dirty: #9A6009;
 
 
 	/*
@@ -96,23 +98,22 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 * ===========
 	 */
 
-	--sans1: Geneva;
-	--sans2: "Tahoma";
-	--sans-default: Verdana, sans-serif;
-	--sans-family: var(--sans1), var(--sans2), var(--sans-default);
+	--sans-inter: "Inter";
+	--sans-fira: "Fira Sans";
+	--sans-default: Verdana, Tahoma, sans-serif;
+	--sans-family: var(--sans-fira), var(--sans-inter), var(--sans-default);
 
-	--serif1: Didot, Didot LT STD;
-	--serif2: Hoefler Text, Garamond;
+	--serif-didot: Didot, "Didot LT STD";
+	--serif-times: "Times New Roman";
 	--serif-default: Georgia, serif;
-	--serif-family: var(--serif1), var(--serif2), var(--serif-default);
+	--serif-family: var(--serif-didot), var(--serif-times), var(--serif-default);
 
-	--fixed1: "Lucida Console", "Lucida Sans Typewriter";
-	--fixed2: Monaco, "Bitstream Vera Sans Mono";
-	--fixed-default: monospace;
-	--mono-family: var(--fixed1), var(--fixed2), var(--fixed-default);
+	--fixed-fira-code: "Fira Code";
+	--fixed-default: "Menlo", "Consolas", "monospace";
+	--mono-family: var(--fixed-fira-code), var(--fixed-default);
 
-	--font-size-default: 20px;
-	--line-height-base: 1.6em;
+	--font-size-default: 16px;
+	--line-height-base: 1.6;
 
 
 	/*
@@ -125,7 +126,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--body-bg-color: var(--gray60);
 	--body-text-color: var(--white);
 
-	--heading-font-family: var(--sans-family);
+	--heading-font-family: var(--serif-family);
 
 	--code-font-family: var(--mono-family);
 
@@ -141,7 +142,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--link-focus-bgcolor: var(--white);
 
 	--selection-color: var(--grey90);
-	--selection-bgcolor: var(--red-light);
+	--selection-bgcolor: var(--orange-dirty);
 
 	--h1-glow-text: var(--aqua6);
 	--h2-glow-text: var(--amber6);
@@ -149,39 +150,25 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 /* END OF LEGEND */
 
-a h1,
-a h2,
-a h3,
-a h4,
-a h5,
-a h6 {
-	background-color: var(--debug-color1);
-	color: #000000;
+html {
+	font-size: var(--font-size-default);
 }
 
-a h1:after {
-	content: " BAD MARKUP! The A goes inside the H1";
+body {
+	font-family: var(--body-font-family);
+	font-weight: initial;
+	line-height: var(--line-height-base);
 }
 
-a h2:after {
-	content: " BAD MARKUP! The A goes inside the H2";
+* {
+	margin: 0;
+	padding: 0;
+	/* apply a natural box layout model to all elements */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-a h3:after {
-	content: " BAD MARKUP! The A goes inside the H3";
-}
-
-a h4:after {
-	content: " BAD MARKUP! The A goes inside the H4";
-}
-
-a h5:after {
-	content: " BAD MARKUP! The A goes inside the H5";
-}
-
-a h6:after {
-	content: " BAD MARKUP! The A goes inside the H6";
-}
 
 a[href$=".pdf"]:after {
 	content: " (PDF)";
@@ -228,6 +215,20 @@ ul.inline {
 ol {
 	list-style-position: inside;
 	margin-left: 0;
+}
+
+p {
+	margin: 1em 0;
+	padding: var(--spacing-medium) 0;
+	word-wrap: break-word;
+}
+
+p,
+ol,
+ul,
+li {
+	font-family: var(--body-font-family);
+	font-size: 1.1rem;
 }
 
 .caps {
@@ -396,7 +397,7 @@ text-right {
 }
 
 .boxed-aqua {
-	background: var(--blue-dark-trans);
+	background: var(--blue-dark);
 	border-radius: 16px;
 	border: none;
 }
@@ -421,8 +422,6 @@ text-right {
 	background-size: 50% 50%;
 	background-repeat: no-repeat;
 	border: none;
-	color: var(--white);
-	font-size: 1.2em;
 }
 
 .mobile-hide {
@@ -445,16 +444,6 @@ text-right {
 	border: 0;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6em;
-	font-family: var(--sans-family);
-	/* apply a natural box layout model to all elements */
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 ::-moz-selection {
 	color: var(--gray90);
@@ -478,7 +467,7 @@ text-right {
 
 ::selection {
 	color: var(--gray90);
-	background-color: var(--red-light);
+	background-color: var(--selection-bgcolor);
 }
 
 a {
@@ -518,11 +507,6 @@ acronym {
 	font-size: inherit;
 }
 
-body {
-	background-color: var(--gray60);
-	color: var(--white);
-	font-size: 20px;
-}
 
 blockquote {
 	font-size: 1.2em;
@@ -555,15 +539,23 @@ form .col2 {
 	flex-grow: 1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--heading-font-family);
+	line-height: 1.15;
+}
+
 h1 {
 	color: var(--white);
-	font-family: var(--sans-family);
-	font-size: 1.6em;
+	font-weight: 700;
+	font-size: 2.49em;
 	margin: var(--spacing-small) 0;
+	margin-top: 0;
 	text-transform: uppercase;
-	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua6);
-	line-height: 1.2;
+	text-shadow: 0px 0px 4px var(--gray10);
 }
 
 h1 a,
@@ -594,13 +586,12 @@ h1 a:focus {
 }
 
 h2 {
-	font-family: var(--sans-family);
-	font-size: 1.3em;
+	font-family: var(--serif-family);
+	font-size: 2.07em;
 	margin: var(--spacing-medium) 0;
 	text-transform: uppercase;
 	color: var(--white);
 	text-shadow: 0px 0px 4px var(--amber6);
-	line-height: 1.2;
 }
 
 h2 a,
@@ -632,12 +623,11 @@ h2 a:focus {
 
 h3 {
 	color: var(--white);
-	font-family: var(--sans-family);
-	font-size: 1.2em;
+	font-family: var(--serif-family);
+	font-size: 1.73em;
 	margin: var(--spacing-medium) 0;
 	color: var(--white);
 	text-shadow: 0px 0px 4px var(--aqua5);
-	line-height: 1.2;
 }
 
 h3 a,
@@ -668,11 +658,10 @@ h3 a:focus {
 }
 
 h4 {
-	font-family: var(--sans-family);
-	font-size: 1.2em;
+	font-family: var(--serif-family);
+	font-size: 1.44em;
 	text-shadow: 1px 1px 2px var(--amber5);
 	color: var(--white);
-	line-height: 1.2;
 }
 
 h4 a,
@@ -706,10 +695,9 @@ h4 a:focus {
 
 h5 {
 	color: var(--white);
-	font-size: 1.4em;
-	font-family: var(--sans-family);
+	font-size: 1.2em;
+	font-family: var(--serif-family);
 	text-transform: uppercase;
-	line-height: 1.2;
 }
 
 h5 a,
@@ -738,7 +726,7 @@ h5 a:focus {
 h6 {
 	color: var(--white);
 	font-size: 1.2em;
-	font-family: var(--sans-family);
+	font-family: var(--serif-family);
 	text-transform: uppercase;
 	line-height: 1.2;
 }
@@ -818,23 +806,24 @@ nav a {
 	color: var(--white);
 	padding: var(--spacing-medium);
 	text-decoration: none;
+	text-transform: uppercase;
 	font-size: 1em;
-	font-family: var(--sans-family);
+	font-family: var(--serif-family);
 	width: 100%;
 }
 
 nav a:link,
 nav a:visited {
-	background: var(--aqua7);
+	background: var(--gray10);
 	color: var(--white);
-	border: 1px solid var(--aqua3);
+	border: 1px solid var(--gray10);
 	border-radius: 8px;
 }
 
 nav a:hover,
 nav a:active,
 nav a:focus {
-	background: var(--red);
+	background: var(--selection-bgcolor);
 	color: var(--white);
 	border: 1px solid var(--white);
 }
@@ -962,16 +951,16 @@ ul.no-bullets {
 	list-style-type: none;
 }
 
-p {
-	font-size: 20px;
-	line-height: 1.6em;
-	margin: 1em 0;
-	padding: var(--spacing-medium) 0;
-	word-wrap: break-word;
+
+ul.wp-block-list {
+	list-style-type: none;
+
+	li {
+		padding: 0.5em;
+	}
 }
 
 p.special {
-	font-size: 1em;
 	margin: 0 auto;
 }
 
@@ -985,15 +974,13 @@ p.special strong {
 }
 
 pre,
+code,
 .code {
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
+	padding: 6px;
 	border-radius: 6px;
 	background-color: var(--gray10);
 	color: var(--white);
 	margin: 1em 0;
-	padding: var(--spacing-medium);
-	font-size: 0.9em;
 	font-family: var(--mono-family);
 	overflow-x: scroll;
 }
@@ -1159,6 +1146,10 @@ textarea {
 
 .projects h2 {
 	margin-top: 0;
+}
+
+.publishing-info {
+	font-family: var(--mono-family);
 }
 
 .publishing-info img {
@@ -1557,7 +1548,6 @@ Desktop
 		width: 300px;
 		height: 300px;
 		position: relative;
-		webkit-transform-style: preserve-3d;
 		transform-style: preserve-3d;
 		transition: 0.5s;
 		color: var(--bright-white);
@@ -1585,7 +1575,7 @@ Desktop
 	}
 
 	.wrap .back {
-		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
 		background-color: var(--debug-color3);
 	}
 
@@ -1631,7 +1621,6 @@ Desktop
 	}
 
 	nav ul {
-		width: 660px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1672,11 +1661,9 @@ Desktop
 	}
 
 	#masthead {
-		width: 35rem;
+		width: 758px;
 		margin-left: auto;
 		margin-right: auto;
-		/* For modern browsers */
-		/* For IE 6/7 (trigger hasLayout) */
 	}
 
 	#masthead:before,
@@ -1687,10 +1674,6 @@ Desktop
 
 	#masthead:after {
 		clear: both;
-	}
-
-	#masthead {
-		*zoom: 1;
 	}
 
 	.category-haiku .entry {

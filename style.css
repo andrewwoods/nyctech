@@ -108,10 +108,9 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--serif-default: Georgia, serif;
 	--serif-family: var(--serif-didot), var(--serif-times), var(--serif-default);
 
-	--fixed-noto-sans: "Noto Sans Mono";
 	--fixed-fira-code: "Fira Code";
-	--fixed-default: "Menlo", "monospace";
-	--mono-family: var(--fixed-noto-sans), var(--fixed-fira-code), var(--fixed-default);
+	--fixed-default: "Menlo", "Consolas", "monospace";
+	--mono-family: var(--fixed-fira-code), var(--fixed-default);
 
 	--font-size-default: 16px;
 	--line-height-base: 1.6;
@@ -977,8 +976,7 @@ p.special strong {
 pre,
 code,
 .code {
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
+	padding: 6px;
 	border-radius: 6px;
 	background-color: var(--gray10);
 	color: var(--white);

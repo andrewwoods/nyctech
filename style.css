@@ -98,10 +98,10 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 * ===========
 	 */
 
-	--sans1: Geneva;
-	--sans2: "Tahoma";
-	--sans-default: Verdana, sans-serif;
-	--sans-family: var(--sans1), var(--sans2), var(--sans-default);
+	--sans-inter: "Inter";
+	--sans-fira: "Fira Sans";
+	--sans-default: Verdana, Tahoma, sans-serif;
+	--sans-family: var(--sans-fira), var(--sans-inter), var(--sans-default);
 
 	--serif-didot: Didot, "Didot LT STD";
 	--serif-times: "Times New Roman";

@@ -594,27 +594,14 @@ h1 {
 h1 a,
 h1 a:link,
 h1 a:visited {
-	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua6);
 	background-color: transparent;
 	text-decoration: none;
 }
 
-h1 a:hover {
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua6);
-	background-color: transparent;
-}
-
-h1 a:active {
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua6);
-	background-color: transparent;
-}
-
+h1 a:hover,
+h1 a:active,
 h1 a:focus {
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua6);
+	text-shadow: 0px 0px 4px var(--gray30);
 	background-color: transparent;
 }
 
@@ -624,14 +611,12 @@ h2 {
 	margin: var(--spacing-medium) 0;
 	text-transform: uppercase;
 	color: var(--white);
-	text-shadow: 0px 0px 4px var(--amber6);
 }
 
 h2 a,
 h2 a:link,
 h2 a:visited {
 	color: var(--white);
-	text-shadow: 0px 0px 4px var(--amber6);
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -639,19 +624,16 @@ h2 a:visited {
 h2 a:hover {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber6);
 }
 
 h2 a:active {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber6);
 }
 
 h2 a:focus {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber6);
 }
 
 h3 {
@@ -660,7 +642,6 @@ h3 {
 	font-size: 1.73em;
 	margin: var(--spacing-medium) 0;
 	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua5);
 }
 
 h3 a,
@@ -669,31 +650,25 @@ h3 a:visited {
 	background-color: transparent;
 	text-decoration: none;
 	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua5);
 }
 
 h3 a:hover {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua5);
 }
 
 h3 a:active {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua5);
 }
 
 h3 a:focus {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua5);
 }
 
 h4 {
-	font-family: var(--serif-family);
 	font-size: 1.44em;
-	text-shadow: 1px 1px 2px var(--amber5);
 	color: var(--white);
 }
 
@@ -706,24 +681,18 @@ h4 a:visited {
 }
 
 h4 a:hover {
-	color: var(--white);
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber5);
 }
 
 h4 a:active {
-	color: var(--white);
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber5);
 }
 
 h4 a:focus {
-	color: var(--white);
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber5);
 }
 
 h5 {

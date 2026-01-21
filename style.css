@@ -215,6 +215,10 @@ ul {
 	list-style-type: square;
 	margin-left: 0;
 
+	ol {
+		margin-left: 1.6rem;
+	}
+
 	ul {
 		margin-left: 1.6rem;
 		list-style-type: disc;
@@ -245,6 +249,10 @@ ol {
 	list-style-position: inside;
 	list-style-type: decimal-leading-zero;
 	margin-left: 0;
+
+	ul {
+		margin-left: 1.6rem;
+	}
 
 	ol {
 		margin-left: 1.6rem;

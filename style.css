@@ -643,6 +643,7 @@ h1 a:focus {
 }
 
 h2 {
+	margin-top: 1rem;
 	font-size: 2.07em;
 }
 
@@ -666,6 +667,7 @@ h2 a:focus {
 }
 
 h3 {
+	margin-top: 1rem;
 	font-size: 1.73em;
 }
 
@@ -685,6 +687,7 @@ h3 a:focus {
 }
 
 h4 {
+	margin-top: 1rem;
 	font-size: 1.44em;
 }
 
@@ -704,6 +707,7 @@ h4 a:focus {
 }
 
 h5 {
+	margin-top: 1rem;
 	font-size: 1.2em;
 }
 
@@ -723,6 +727,7 @@ h5 a:focus {
 }
 
 h6 {
+	margin-top: 1rem;
 	font-size: 1em;
 	text-transform: uppercase;
 }

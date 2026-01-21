@@ -948,14 +948,20 @@ p.special strong {
 	margin-top: 0;
 }
 
-pre,
-code,
-.code {
+pre {
 	padding: 6px;
 	border-radius: 6px;
 	background-color: var(--gray10);
 	color: var(--white);
 	margin: 1em 0;
+	font-family: var(--mono-family);
+	overflow-x: scroll;
+}
+
+code,
+.code {
+	background-color: inherit;
+	color: var(--white);
 	font-family: var(--mono-family);
 	overflow-x: scroll;
 }

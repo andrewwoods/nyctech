@@ -196,8 +196,21 @@ a[href$=".xls"][data-size]:after {
 
 ul {
 	list-style-position: inside;
-	list-style-type: disc;
+	list-style-type: square;
 	margin-left: 0;
+
+	ul {
+		margin-left: 1.6rem;
+		list-style-type: disc;
+
+		ul {
+			list-style-type: square;
+
+			ul {
+				list-style-type: disc;
+			}
+		}
+	}
 }
 
 ul.no-bullets {

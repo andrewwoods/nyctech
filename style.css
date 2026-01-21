@@ -530,6 +530,11 @@ acronym {
 	font-size: inherit;
 }
 
+q {
+	font-family: var(--mono-family);
+	font-size: inherit;
+}
+
 
 blockquote {
 	font-size: 1.2em;
@@ -546,6 +551,11 @@ em {
 	color: var(--white);
 	font-style: italic;
 	font-size: inherit;
+}
+
+cite {
+	font-family: var(--mono-family);
+	font-style: normal;
 }
 
 form {

@@ -227,7 +227,17 @@ ul.inline {
 
 ol {
 	list-style-position: inside;
+	list-style-type: decimal-leading-zero;
 	margin-left: 0;
+
+	ol {
+		margin-left: 1.6rem;
+		list-style-type: decimal-leading-zero;
+
+		ol {
+			list-style-type: decimal-leading-zero;
+		}
+	}
 }
 
 p {

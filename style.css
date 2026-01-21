@@ -197,6 +197,18 @@ a[href$=".xls"][data-size]:after {
 	content: " (XLS, " attr(data-size) ")";
 }
 
+dl {
+	margin-left: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding-left: 1rem;
+}
+
 ul {
 	list-style-position: inside;
 	list-style-type: square;
@@ -250,6 +262,9 @@ p {
 }
 
 p,
+dl,
+dt,
+dd,
 ol,
 ul,
 li {

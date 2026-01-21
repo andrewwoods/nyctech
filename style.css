@@ -77,6 +77,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--aqua8: #80D4E5;
 	--aqua-light: #A0E8FF;
 
+	--purple-light: #F4A9FB;
 	--amber5: #EF6238;
 	--amber6: #FF7F60;
 	--orange-dirty: #9A6009;
@@ -541,10 +542,16 @@ a:focus {
 	color: var(--blue-dark);
 }
 
-acronym {
-	border-bottom: 1px dashed var(--gray80);
-	color: var(--aqua4);
+
+acronym,
+abbr {
+	color: var(--purple-light);
+	text-transform: uppercase;
 	font-size: inherit;
+
+	&[title] {
+		text-decoration: none;
+	}
 }
 
 q {

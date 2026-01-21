@@ -570,13 +570,18 @@ q {
 
 blockquote {
 	font-size: 1.2em;
-	font-style: italic;
-	background-color: var(--aqua3);
+	font-family: var(--serif-family);
+	background-color: var(--blue-dark);
 	color: var(--white);
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	padding: var(--spacing-medium);
+
+	p {
+		margin-top: 0;
+		padding-top: 0;
+		font-family: inherit;
+		font-size: larger;
+	}
 }
 
 em {

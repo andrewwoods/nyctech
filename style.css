@@ -997,17 +997,25 @@ th {
 	padding: var(--spacing-medium);
 	text-transform: uppercase;
 	background-color: var(--gray90);
-	color: var(--aqua2);
+	color: var(--blue);
 }
 
 tr {
-	background-color: var(--aqua2);
 	color: var(--white);
 }
 
 tr:nth-child(even) {
-	background-color: var(--aqua3);
+	background-color: var(--blue-dark);
 	color: var(--white);
+}
+
+tbody th {
+	background-color: var(--gray80);
+	color: var(--blue);
+}
+
+tbody th a:link {
+	color: var(--blue);
 }
 
 textarea {
@@ -1569,7 +1577,6 @@ Desktop
 	}
 
 	table {
-		display: block;
 		overflow-x: scroll;
 	}
 

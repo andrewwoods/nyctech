@@ -356,12 +356,9 @@ li {
 .warning,
 .no-comments {
 	background-color: #00309f;
-	border: 2px solid #d8ebfa;
 	color: #d8ebfa;
 	margin: 1em 0;
 	padding: var(--spacing-medium);
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
 	border-radius: 6px;
 }
 
@@ -393,7 +390,6 @@ li {
 .warning,
 .no-comments {
 	background-color: #B49463;
-	border: 2px solid #F9F9E9;
 	color: #F9F9E9;
 }
 

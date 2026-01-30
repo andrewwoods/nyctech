@@ -22,12 +22,12 @@ add_action( 'pre_get_posts', 'aquatech_modify_main_query' );
  * other pages, it add the site name to the standard page title
  *
  * @since 1.0
- * @uses wp_title filter
+ * @uses  wp_title filter
  *
- * @param string $title the title of the page
- * @param string $sep a separator. one or more characters to divide the
+ * @param  string $title the title of the page
+ * @param  string $sep a separator. one or more characters to divide the
  *        page title
- * @param string $seplocation can be 'left' or 'right'. default: left.
+ * @param  string $seplocation can be 'left' or 'right'. default: left.
  * @return string
  */
 /*
@@ -36,9 +36,9 @@ add_action( 'pre_get_posts', 'aquatech_modify_main_query' );
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-register_nav_menus( array(
-	'main_menu' => 'Main Menu',
-	'footer_menu' => 'Footer Menu',
-) );
-
-
+register_nav_menus(
+	array(
+		'main_menu'   => 'Main Menu',
+		'footer_menu' => 'Footer Menu',
+	)
+);

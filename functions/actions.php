@@ -13,7 +13,7 @@
  * @param WP_Query $query query object to modify.
  */
 function aquatech_modify_main_query( $query ) {
-	if ( $query->is_category( [ 'articles', 'journal', 'tutorials' ] ) && $query->is_main_query() ) {
+	if ( $query->is_category( array( 'articles', 'journal', 'tutorials' ) ) && $query->is_main_query() ) {
 		$query->query_vars['posts_per_archive_page'] = 4;
 	}
 }
@@ -55,7 +55,7 @@ function get_id_slug() {
 				$slug = 'author-' . sanitize_html_class( $author->user_nicename, $author->ID );
 			}
 		} elseif ( is_category() ) {
-			$cat = $wp_query->get_queried_object();
+			$cat  = $wp_query->get_queried_object();
 			$slug = 'category';
 			if ( isset( $cat->term_id ) ) {
 				$slug = 'category-' . sanitize_html_class( $cat->slug, $cat->term_id );
@@ -110,7 +110,7 @@ function aquatech_load_icomoon() {
  */
 function debug_object( $value ) {
 	echo '<pre>';
-	print_r($value);
+	print_r( $value );
 	echo '</pre>';
 }
 
@@ -118,7 +118,7 @@ function debug_object( $value ) {
 /**
  * Set paging parameters for blog posts page
  *
- * @param WP_Query $query the query object to update.
+ * @param  WP_Query $query the query object to update.
  * @return WP_Query
  */
 function aquatech_page_blog_posts( $query ) {
@@ -135,15 +135,15 @@ function aquatech_page_blog_posts( $query ) {
 function aquatech_theme_support() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'post-formats',
+	add_theme_support(
+		'post-formats',
 		array(
 			'aside',
 			'gallery',
 			'link',
 			'image',
 			'quote',
-			'status'
+			'status',
 		)
 	);
 }
-

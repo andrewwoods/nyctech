@@ -118,10 +118,12 @@ class Social_Walker extends Walker_Nav_Menu {
 
 		$item_title = apply_filters( 'the_title', $item->title, $item->ID );
 
-		$item_output = $args->before;
+		$item_output  = $args['before'];
 		$item_output .= '<a' . $attributes . '>';
-		/** This filter is documented in wp-includes/post-template.php */
-		$item_output .= $args->link_before;
+		/**
+		 * This filter is documented in wp-includes/post-template.php
+		 */
+		$item_output .= $args['link_before'];
 		$item_output .= sprintf(
 			'<img src="%s" height="%d" width="%d" alt="%s">',
 			$img_url,
@@ -129,9 +131,9 @@ class Social_Walker extends Walker_Nav_Menu {
 			$size,
 			$item_title
 		);
-		$item_output .= $args->link_after;
+		$item_output .= $args['link_after'];
 		$item_output .= '</a>';
-		$item_output .= $args->after;
+		$item_output .= $args['after'];
 
 		/**
 		 * Filter a menu item's starting output.

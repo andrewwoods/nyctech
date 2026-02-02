@@ -258,13 +258,15 @@ ol {
 	}
 }
 
-p {
+p,
+div.public-DraftStyleDefault-block {
 	margin: 1em 0;
 	padding: var(--spacing-medium) 0;
 	word-wrap: break-word;
 }
 
 p,
+div.public-DraftStyleDefault-block,
 dl,
 dt,
 dd,
@@ -283,45 +285,6 @@ li {
 	list-style-type: none;
 }
 
-.ten {
-	width: 9.9%;
-}
-
-.twenty {
-	width: 19.9%;
-}
-
-.thirty {
-	width: 29.9%;
-}
-
-.forty {
-	width: 39.9%;
-}
-
-.fifty {
-	width: 49.9%;
-}
-
-.sixty {
-	width: 59.9%;
-}
-
-.seventy {
-	width: 69.9%;
-}
-
-.eighty {
-	width: 79.9%;
-}
-
-.ninety {
-	width: 89.9%;
-}
-
-.hundred {
-	width: 100%;
-}
 
 .completed {
 	text-decoration: line-through;
@@ -927,11 +890,14 @@ ol.no-bullets {
 
 ul {
 	list-style-position: inside;
-	font-size: 20px;
 }
 
 ul.no-bullets {
 	list-style-type: none;
+
+	li {
+		padding: 0.5em;
+	}
 }
 
 
@@ -941,6 +907,10 @@ ul.wp-block-list {
 	li {
 		padding: 0.5em;
 	}
+}
+
+.taxonomy-list {
+	padding: 0.5rem 0;
 }
 
 p.special {
@@ -1322,7 +1292,6 @@ section.main .home {
 
 nav.social-links {
 	display: block;
-	vertical-align: top;
 	margin-top: 1em;
 	margin-left: auto;
 	margin-right: auto;
@@ -1421,7 +1390,7 @@ a.button-light {
 	}
 
 	#main {
-		width: 90%;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1594,6 +1563,12 @@ Desktop
 		padding-top: 1em;
 		padding-bottom: 1em;
 		margin: 0 0 1em;
+
+		aside {
+			float: right;
+			margin-left: 1em;
+			margin-right: 0;
+		}
 	}
 
 	.form-info {
@@ -1610,10 +1585,6 @@ Desktop
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	nav {
-		float: left;
 	}
 
 	nav ul {
@@ -1649,7 +1620,8 @@ Desktop
 	}
 
 	#nav {
-		width: 100%;
+		width: 700px;
+		margin-left: auto;
 	}
 
 	#brand img {

@@ -70,11 +70,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--aqua2-trans: rgba(6, 68, 86, var(--medium-opacity));
 	--aqua3: #096A86;
 	--aqua3-trans: rgba(9, 96, 110, var(--medium-opacity));
-	--aqua4: #0FA2CD;
-	--aqua5: #38C6F0;
-	--aqua6: #3EEEFF;
 	--aqua7: #00363C;
-	--aqua8: #80D4E5;
 	--aqua-light: #A0E8FF;
 
 	--purple-light: #F4A9FB;
@@ -148,8 +144,6 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--selection-color: var(--grey90);
 	--selection-bgcolor: var(--orange-dirty);
 
-	--h1-glow-text: var(--aqua6);
-	--h2-glow-text: var(--amber6);
 }
 
 /* END OF LEGEND */

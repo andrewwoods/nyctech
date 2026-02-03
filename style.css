@@ -355,21 +355,24 @@ li {
 	color: #F9F9E9;
 }
 
-text-left {
+.text-left {
 	text-align: left;
 }
 
-text-center {
+.text-center {
 	text-align: center;
 }
 
-text-right {
+.text-right {
 	text-align: right;
 }
 
-.alignnone,
+.alignnone {
+	float: none;
+	margin: 0;
+}
+
 .alignleft {
-	display: block;
 	float: left;
 	margin-right: 1em;
 	margin-bottom: 1em;
@@ -379,10 +382,10 @@ text-right {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	float: none;
 }
 
 .alignright {
-	display: block;
 	float: right;
 	margin-left: 1em;
 	margin-bottom: 1em;

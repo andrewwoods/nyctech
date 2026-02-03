@@ -65,6 +65,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--blue: rgb(9, 60, 110);
 	--blue-dark: rgb(7, 48, 88);
+	--blue-darker: rgb(4, 32, 58);
 	--blue-dark-trans: rgba(9, 60, 110, var(--medium-opacity));
 	--aqua2: #064456;
 	--aqua2-trans: rgba(6, 68, 86, var(--medium-opacity));
@@ -73,6 +74,9 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--aqua7: #00363C;
 	--aqua-light: #A0E8FF;
 
+	--green: #08e955;
+	--purple: #BDA6C5;
+	--purple-dark: #36243C;
 	--purple-light: #F4A9FB;
 	--amber5: #EF6238;
 	--amber6: #FF7F60;
@@ -80,6 +84,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--yellow: #E9CB79;
 	--yellow-light: #F0DBA1;
+	--yellow-dark: #D9B144;
 
 	/*
 	 * SPACING LEGEND
@@ -123,7 +128,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--body-font-family: var(--sans-family);
 	--body-font-size: var(--font-size-default);
-	--body-bg-color: var(--gray60);
+	--body-bg-color: var(--blue-darker);
 	--body-text-color: var(--white);
 
 	--heading-font-family: var(--serif-family);
@@ -391,8 +396,7 @@ text-right {
 .boxed-aqua,
 .boxed-tinted,
 .boxed-special {
-	background: var(--blue-dark-trans);
-	border: 2px solid var(--aqua3);
+	background: var(--blue-dark);
 	color: var(--white);
 	font-size: 1.2em;
 	margin: 1em 0;
@@ -400,7 +404,7 @@ text-right {
 }
 
 .boxed-aqua {
-	background: var(--blue-dark);
+	background: var(--blue);
 	border-radius: 16px;
 	border: none;
 }
@@ -543,6 +547,10 @@ em {
 	font-size: inherit;
 }
 
+var {
+	color: var(--green);
+}
+
 cite {
 	font-family: var(--mono-family);
 	font-style: normal;
@@ -593,6 +601,7 @@ h1 a:active,
 h1 a:focus {
 	text-shadow: 0px 0px 4px var(--gray30);
 	background-color: transparent;
+	color: var(--white);
 }
 
 h2 {
@@ -760,9 +769,9 @@ nav a {
 
 nav a:link,
 nav a:visited {
-	background: var(--gray10);
+	background: var(--blue-darker);
 	color: var(--white);
-	border: 1px solid var(--gray10);
+	border: 1px solid var(--blue-dark);
 	border-radius: 8px;
 }
 
@@ -797,8 +806,8 @@ nav .sub-menu a {
 }
 
 nav .current-menu-item>a {
-	background: var(--aqua6);
-	color: var(--aqua7);
+	background: var(--blue);
+	color: var(--yellow-light);
 }
 
 nav .current-menu-item>a:hover,
@@ -929,7 +938,7 @@ p.special strong {
 pre {
 	padding: 6px;
 	border-radius: 6px;
-	background-color: var(--gray10);
+	background-color: var(--purple-dark);
 	color: var(--white);
 	margin: 1em 0;
 	font-family: var(--mono-family);
@@ -1235,7 +1244,7 @@ textarea {
 
 #brand {
 	color: var(--white);
-	text-shadow: 0px 0px 8px var(--aqua6);
+	text-shadow: 0px 0px 8px var(--gray10);
 	background-color: transparent;
 	display: block;
 	padding: 0 0;
@@ -1358,11 +1367,6 @@ nav.social-links a:active {
 	padding: 1em;
 }
 
-.button-dark,
-a.button-dark {
-	background-color: var(--aqua2);
-	color: var(--aqua-light);
-}
 
 .button-light,
 a.button-light {
@@ -1377,16 +1381,8 @@ a.button-light {
 @media screen and (min-width: 320px) {
 
 	body {
-		/* Safari 4-5, Chrome 1-9 */
-		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(var(--gray20)), to(var(--gray90)));
-		/* Safari 5.1, Chrome 10+ */
-		background: -webkit-linear-gradient(top, var(--gray90), var(--gray20));
-		/* Firefox 3.6+ */
-		background: -moz-linear-gradient(top, var(--gray90), var(--gray20));
-		/* IE 10 */
-		background: -ms-linear-gradient(top, var(--gray90), var(--gray20));
-		/* Opera 11.10+ */
-		background: -o-linear-gradient(top, var(--gray90), var(--gray20));
+		background-color: var(--body-bg-color);
+		color: var(--body-text-color);
 	}
 
 	#main {

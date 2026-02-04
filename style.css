@@ -353,6 +353,7 @@ li {
 .no-comments {
 	background-color: #B49463;
 	color: #F9F9E9;
+	border: none;
 }
 
 .text-left {
@@ -401,7 +402,6 @@ li {
 .boxed-special {
 	background: var(--blue-dark);
 	color: var(--white);
-	font-size: 1.2em;
 	margin: 1em 0;
 	padding: 1em;
 }
@@ -410,6 +410,12 @@ li {
 	background: var(--blue);
 	border-radius: 16px;
 	border: none;
+}
+
+.boxed {
+	font-size: 1.2em;
+	margin: 1em 0;
+	padding: 1em;
 }
 
 .boxed-tinted {
@@ -490,6 +496,9 @@ a:link {
 	color: var(--yellow);
 }
 
+/**
+* Examine the typography for weirdness.
+*/
 a:visited {
 	background-color: transparent;
 	color: var(--yellow-light);
@@ -527,6 +536,14 @@ q {
 	font-size: inherit;
 }
 
+aside {
+	width: 50%;
+	background-color: var(--blue-dark);
+	color: var(--white);
+	font-size: larger;
+	padding: 1em;
+	margin: 1em 0;
+}
 
 blockquote {
 	font-size: 1.2em;
@@ -945,7 +962,7 @@ pre {
 	color: var(--white);
 	margin: 1em 0;
 	font-family: var(--mono-family);
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 
 code,
@@ -983,6 +1000,7 @@ th {
 }
 
 tr {
+	background-color: var(--blue);
 	color: var(--white);
 }
 
@@ -998,6 +1016,19 @@ tbody th {
 
 tbody th a:link {
 	color: var(--blue);
+}
+
+.wp-block-table.is-style-stripes tbody {
+
+	tr:nth-child(odd) {
+		background-color: var(--blue);
+		color: var(--white);
+	}
+
+	tr:nth-child(even) {
+		background-color: var(--blue-dark);
+		color: var(--white);
+	}
 }
 
 textarea {
@@ -1167,10 +1198,10 @@ textarea {
 	width: 100%;
 }
 
-.sticky-post {
-	padding: var(--spacing-medium);
-	background-color: var(--gray90);
-	color: var(--white);
+.sticky-post,
+.sticky {
+	background-color: var(--purple-dark);
+	color: var(--gray90);
 }
 
 .technology ul {
@@ -1338,10 +1369,18 @@ nav.social-links a:active {
 	border: none;
 }
 
-.calls-to-action {
-	background-color: var(--gray20);
-	color: var(--gray90);
+#main .calls-to-action {
+	color: var(--gray20);
+	background-color: var(--yellow-dark);
 	border-radius: var(--spacing-medium);
+
+	.content {
+		margin: 0;
+
+		p {
+			padding: 0;
+		}
+	}
 }
 
 .textwidget p {

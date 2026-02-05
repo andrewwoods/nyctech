@@ -15,9 +15,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 	?>
-		<article id="post-<?php the_ID(); ?>" class="boxed-aqua">
-			<?php echo the_content(); ?>
-		</article>
+		<?php get_template_part('templates/excerpt'); ?>
 	<?php
 		endwhile;
 	else :

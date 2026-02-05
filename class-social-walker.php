@@ -3,17 +3,18 @@
 /**
  * description of package
  *
- * @package YourPackage
+ * @package    YourPackage
  * @subpackage Subpackage name
- * @author firstname lastname <user@host.com>
+ * @author     firstname lastname <user@host.com>
  */
 class Social_Walker extends Walker_Nav_Menu {
 
-	 /**
-	  * Tell Walker where to inherit it's parent and id values.
-	  *
-	  * @var array $db_fields fields for query.
-	  */
+
+	/**
+	 * Tell Walker where to inherit it's parent and id values.
+	 *
+	 * @var array $db_fields fields for query.
+	 */
 	public $db_fields = array(
 		'parent' => 'menu_item_parent',
 		'id'     => 'db_id',
@@ -36,17 +37,15 @@ class Social_Walker extends Walker_Nav_Menu {
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-		$li_classes = array();
-		$a_classes = array();
+		$li_classes  = array();
+		$a_classes   = array();
 		$img_classes = array( 'screen-reader-text' );
 
-
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'social-menu-item-' . $item->ID;
 		foreach ( $classes as $class_name ) {
 			$li_classes[] = $class_name;
 		}
-
 
 		/**
 		 * Filter the CSS class(es) applied to a menu item's <li>.
@@ -78,12 +77,12 @@ class Social_Walker extends Walker_Nav_Menu {
 
 		$output .= $indent . '<li' . $id . $class_names . '>';
 
-		$atts = array();
-		$atts['class'] = implode( ' ', $a_classes );
-		$atts['title'] = ! empty( $item->attr_title ) ? $item->attr_title : '';
+		$atts           = array();
+		$atts['class']  = implode( ' ', $a_classes );
+		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
 		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-		$atts['rel'] = ! empty( $item->xfn ) ? $item->xfn : '';
-		$atts['href'] = ! empty( $item->url ) ? $item->url : '';
+		$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+		$atts['href']   = ! empty( $item->url ) ? $item->url : '';
 
 		/**
 		 * Filter the HTML attributes applied to a menu item's <a>.
@@ -95,10 +94,10 @@ class Social_Walker extends Walker_Nav_Menu {
 		 * @param array $atts {
 		 *     The HTML attributes applied to the menu item's <a>, empty strings are ignored.
 		 *
-		 *     @type string $title  Title attribute.
-		 *     @type string $target Target attribute.
-		 *     @type string $rel    The rel attribute.
-		 *     @type string $href   The href attribute.
+		 *     @type  string $title  Title attribute.
+		 *     @type  string $target Target attribute.
+		 *     @type  string $rel    The rel attribute.
+		 *     @type  string $href   The href attribute.
 		 * }
 		 * @param object $item The current menu item.
 		 * @param array  $args An array of wp_nav_menu() arguments.
@@ -108,20 +107,22 @@ class Social_Walker extends Walker_Nav_Menu {
 		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
 			if ( ! empty( $value ) ) {
-				$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
 				$attributes .= ' ' . $attr . '="' . $value . '"';
 			}
 		}
 
 		list( $name, $size ) = explode( '-', $classes[0] );
-		$img_url = $this->class_to_icon_url( $name, $size );
+		$img_url             = $this->class_to_icon_url( $name, $size );
 
 		$item_title = apply_filters( 'the_title', $item->title, $item->ID );
 
-		$item_output = $args->before;
+		$item_output  = $args['before'];
 		$item_output .= '<a' . $attributes . '>';
-		/** This filter is documented in wp-includes/post-template.php */
-		$item_output .= $args->link_before;
+		/**
+		 * This filter is documented in wp-includes/post-template.php
+		 */
+		$item_output .= $args['link_before'];
 		$item_output .= sprintf(
 			'<img src="%s" height="%d" width="%d" alt="%s">',
 			$img_url,
@@ -129,9 +130,9 @@ class Social_Walker extends Walker_Nav_Menu {
 			$size,
 			$item_title
 		);
-		$item_output .= $args->link_after;
+		$item_output .= $args['link_after'];
 		$item_output .= '</a>';
-		$item_output .= $args->after;
+		$item_output .= $args['after'];
 
 		/**
 		 * Filter a menu item's starting output.
@@ -155,7 +156,7 @@ class Social_Walker extends Walker_Nav_Menu {
 	/**
 	 * Create an image url based on a class name.
 	 *
-	 * @param string $name the name of the class.
+	 * @param string   $name the name of the class.
 	 * @param int|bool $size the dimensions of the image.
 	 *
 	 * @return string
@@ -164,7 +165,7 @@ class Social_Walker extends Walker_Nav_Menu {
 
 		$filename = "{$name}.png";
 
-		$img_url = get_template_directory_uri();
+		$img_url  = get_template_directory_uri();
 		$img_url .= '/img/social-icons';
 		if ( $size ) {
 			$img_url .= '/' . $size;
@@ -173,7 +174,4 @@ class Social_Walker extends Walker_Nav_Menu {
 
 		return $img_url;
 	}
-
-
 }
-

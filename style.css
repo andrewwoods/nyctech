@@ -63,23 +63,28 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--red: #BB4545;
 
 
-	--blue-dark: rgb(9, 60, 110);
+	--blue: rgb(9, 60, 110);
+	--blue-dark: rgb(7, 48, 88);
+	--blue-darker: rgb(4, 32, 58);
 	--blue-dark-trans: rgba(9, 60, 110, var(--medium-opacity));
 	--aqua2: #064456;
 	--aqua2-trans: rgba(6, 68, 86, var(--medium-opacity));
 	--aqua3: #096A86;
 	--aqua3-trans: rgba(9, 96, 110, var(--medium-opacity));
-	--aqua4: #0FA2CD;
-	--aqua5: #38C6F0;
-	--aqua6: #3EEEFF;
 	--aqua7: #00363C;
-	--aqua8: #80D4E5;
 	--aqua-light: #A0E8FF;
 
+	--green: #08e955;
+	--purple: #BDA6C5;
+	--purple-dark: #36243C;
+	--purple-light: #F4A9FB;
 	--amber5: #EF6238;
 	--amber6: #FF7F60;
 	--orange-dirty: #9A6009;
 
+	--yellow: #E9CB79;
+	--yellow-light: #F0DBA1;
+	--yellow-dark: #D9B144;
 
 	/*
 	 * SPACING LEGEND
@@ -123,7 +128,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--body-font-family: var(--sans-family);
 	--body-font-size: var(--font-size-default);
-	--body-bg-color: var(--gray60);
+	--body-bg-color: var(--blue-darker);
 	--body-text-color: var(--white);
 
 	--heading-font-family: var(--serif-family);
@@ -144,8 +149,6 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--selection-color: var(--grey90);
 	--selection-bgcolor: var(--orange-dirty);
 
-	--h1-glow-text: var(--aqua6);
-	--h2-glow-text: var(--amber6);
 }
 
 /* END OF LEGEND */
@@ -194,10 +197,39 @@ a[href$=".xls"][data-size]:after {
 	content: " (XLS, " attr(data-size) ")";
 }
 
+dl {
+	margin-left: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding-left: 1rem;
+}
+
 ul {
 	list-style-position: inside;
-	list-style-type: disc;
+	list-style-type: square;
 	margin-left: 0;
+
+	ol {
+		margin-left: 1.6rem;
+	}
+
+	ul {
+		margin-left: 1.6rem;
+		list-style-type: disc;
+
+		ul {
+			list-style-type: square;
+
+			ul {
+				list-style-type: disc;
+			}
+		}
+	}
 }
 
 ul.no-bullets {
@@ -214,16 +246,35 @@ ul.inline {
 
 ol {
 	list-style-position: inside;
+	list-style-type: decimal-leading-zero;
 	margin-left: 0;
+
+	ul {
+		margin-left: 1.6rem;
+	}
+
+	ol {
+		margin-left: 1.6rem;
+		list-style-type: decimal-leading-zero;
+
+		ol {
+			list-style-type: decimal-leading-zero;
+		}
+	}
 }
 
-p {
+p,
+div.public-DraftStyleDefault-block {
 	margin: 1em 0;
 	padding: var(--spacing-medium) 0;
 	word-wrap: break-word;
 }
 
 p,
+div.public-DraftStyleDefault-block,
+dl,
+dt,
+dd,
 ol,
 ul,
 li {
@@ -239,45 +290,6 @@ li {
 	list-style-type: none;
 }
 
-.ten {
-	width: 9.9%;
-}
-
-.twenty {
-	width: 19.9%;
-}
-
-.thirty {
-	width: 29.9%;
-}
-
-.forty {
-	width: 39.9%;
-}
-
-.fifty {
-	width: 49.9%;
-}
-
-.sixty {
-	width: 59.9%;
-}
-
-.seventy {
-	width: 69.9%;
-}
-
-.eighty {
-	width: 79.9%;
-}
-
-.ninety {
-	width: 89.9%;
-}
-
-.hundred {
-	width: 100%;
-}
 
 .completed {
 	text-decoration: line-through;
@@ -306,12 +318,9 @@ li {
 .warning,
 .no-comments {
 	background-color: #00309f;
-	border: 2px solid #d8ebfa;
 	color: #d8ebfa;
 	margin: 1em 0;
 	padding: var(--spacing-medium);
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
 	border-radius: 6px;
 }
 
@@ -343,25 +352,28 @@ li {
 .warning,
 .no-comments {
 	background-color: #B49463;
-	border: 2px solid #F9F9E9;
 	color: #F9F9E9;
+	border: none;
 }
 
-text-left {
+.text-left {
 	text-align: left;
 }
 
-text-center {
+.text-center {
 	text-align: center;
 }
 
-text-right {
+.text-right {
 	text-align: right;
 }
 
-.alignnone,
+.alignnone {
+	float: none;
+	margin: 0;
+}
+
 .alignleft {
-	display: block;
 	float: left;
 	margin-right: 1em;
 	margin-bottom: 1em;
@@ -371,10 +383,10 @@ text-right {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	float: none;
 }
 
 .alignright {
-	display: block;
 	float: right;
 	margin-left: 1em;
 	margin-bottom: 1em;
@@ -388,18 +400,22 @@ text-right {
 .boxed-aqua,
 .boxed-tinted,
 .boxed-special {
-	background: var(--blue-dark-trans);
-	border: 2px solid var(--aqua3);
+	background: var(--blue-dark);
 	color: var(--white);
-	font-size: 1.2em;
 	margin: 1em 0;
 	padding: 1em;
 }
 
 .boxed-aqua {
-	background: var(--blue-dark);
+	background: var(--blue);
 	border-radius: 16px;
 	border: none;
+}
+
+.boxed {
+	font-size: 1.2em;
+	margin: 1em 0;
+	padding: 1em;
 }
 
 .boxed-tinted {
@@ -472,57 +488,92 @@ text-right {
 
 a {
 	background-color: transparent;
-	color: #ffa893;
 	font-size: inherit;
 }
 
 a:link {
 	background-color: transparent;
-	color: #ffa893;
+	color: var(--yellow);
 }
 
+/**
+* Examine the typography for weirdness.
+*/
 a:visited {
 	background-color: transparent;
-	color: #ffd1c6;
+	color: var(--yellow-light);
 }
 
 a:hover {
 	background-color: var(--white);
-	color: var(--red-light);
+	color: var(--blue);
 }
 
 a:active {
-	background-color: var(--white);
-	color: var(--red-light);
+	background-color: var(--yellow-light);
+	color: var(--blue-dark);
 }
 
 a:focus {
-	background-color: var(--white);
-	color: var(--red-light);
+	background-color: var(--yellow-light);
+	color: var(--blue-dark);
 }
 
-acronym {
-	border-bottom: 1px dashed var(--gray80);
-	color: var(--aqua4);
+
+acronym,
+abbr {
+	color: var(--purple-light);
+	text-transform: uppercase;
+	font-size: inherit;
+
+	&[title] {
+		text-decoration: none;
+	}
+}
+
+q {
+	font-family: var(--mono-family);
 	font-size: inherit;
 }
 
+aside {
+	width: 50%;
+	background-color: var(--blue-dark);
+	color: var(--white);
+	font-size: larger;
+	padding: 1em;
+	margin: 1em 0;
+}
 
 blockquote {
 	font-size: 1.2em;
-	font-style: italic;
-	background-color: var(--aqua3);
+	font-family: var(--serif-family);
+	background-color: var(--blue-dark);
 	color: var(--white);
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	padding: var(--spacing-medium);
+
+	p {
+		margin-top: 0;
+		padding-top: 0;
+		font-family: inherit;
+		font-size: larger;
+	}
 }
 
 em {
 	color: var(--white);
 	font-style: italic;
 	font-size: inherit;
+}
+
+var {
+	color: var(--green);
+}
+
+cite {
+	font-family: var(--mono-family);
+	font-style: normal;
 }
 
 form {
@@ -543,91 +594,63 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	font-family: var(--heading-font-family);
 	line-height: 1.15;
+	margin: var(--spacing-small) 0;
+	color: var(--white);
 }
 
 h1 {
-	color: var(--white);
 	font-weight: 700;
 	font-size: 2.49em;
-	margin: var(--spacing-small) 0;
 	margin-top: 0;
-	text-transform: uppercase;
 	text-shadow: 0px 0px 4px var(--gray10);
 }
 
 h1 a,
 h1 a:link,
 h1 a:visited {
-	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua6);
 	background-color: transparent;
 	text-decoration: none;
 }
 
-h1 a:hover {
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua6);
-	background-color: transparent;
-}
-
-h1 a:active {
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua6);
-	background-color: transparent;
-}
-
+h1 a:hover,
+h1 a:active,
 h1 a:focus {
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua6);
+	text-shadow: 0px 0px 4px var(--gray30);
 	background-color: transparent;
+	color: var(--white);
 }
 
 h2 {
-	font-family: var(--serif-family);
+	margin-top: 1rem;
 	font-size: 2.07em;
-	margin: var(--spacing-medium) 0;
-	text-transform: uppercase;
-	color: var(--white);
-	text-shadow: 0px 0px 4px var(--amber6);
 }
 
 h2 a,
 h2 a:link,
 h2 a:visited {
 	color: var(--white);
-	text-shadow: 0px 0px 4px var(--amber6);
 	background-color: transparent;
 	text-decoration: none;
 }
 
-h2 a:hover {
-	background-color: transparent;
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber6);
-}
-
+h2 a:hover,
 h2 a:active {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber6);
 }
 
 h2 a:focus {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber6);
 }
 
 h3 {
-	color: var(--white);
-	font-family: var(--serif-family);
+	margin-top: 1rem;
 	font-size: 1.73em;
-	margin: var(--spacing-medium) 0;
-	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua5);
 }
 
 h3 a,
@@ -636,32 +659,18 @@ h3 a:visited {
 	background-color: transparent;
 	text-decoration: none;
 	color: var(--white);
-	text-shadow: 0px 0px 4px var(--aqua5);
 }
 
-h3 a:hover {
-	background-color: transparent;
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua5);
-}
-
-h3 a:active {
-	background-color: transparent;
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua5);
-}
-
+h3 a:hover,
+h3 a:active,
 h3 a:focus {
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--aqua5);
 }
 
 h4 {
-	font-family: var(--serif-family);
+	margin-top: 1rem;
 	font-size: 1.44em;
-	text-shadow: 1px 1px 2px var(--amber5);
-	color: var(--white);
 }
 
 h4 a,
@@ -672,32 +681,16 @@ h4 a:visited {
 	text-decoration: none;
 }
 
-h4 a:hover {
-	color: var(--white);
-	background-color: transparent;
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber5);
-}
-
-h4 a:active {
-	color: var(--white);
-	background-color: transparent;
-	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber5);
-}
-
+h4 a:hover,
+h4 a:active,
 h4 a:focus {
-	color: var(--white);
 	background-color: transparent;
 	color: var(--bright-white);
-	text-shadow: 0px 0px 8px var(--amber5);
 }
 
 h5 {
-	color: var(--white);
+	margin-top: 1rem;
 	font-size: 1.2em;
-	font-family: var(--serif-family);
-	text-transform: uppercase;
 }
 
 h5 a,
@@ -708,27 +701,17 @@ h5 a:visited {
 	text-decoration: none;
 }
 
-h5 a:hover {
-	color: var(--aqua6);
-	background-color: transparent;
-}
-
-h5 a:active {
-	color: var(--aqua6);
-	background-color: transparent;
-}
-
+h5 a:hover,
+h5 a:active,
 h5 a:focus {
-	color: var(--aqua6);
+	color: var(--bright-white);
 	background-color: transparent;
 }
 
 h6 {
-	color: var(--white);
-	font-size: 1.2em;
-	font-family: var(--serif-family);
+	margin-top: 1rem;
+	font-size: 1em;
 	text-transform: uppercase;
-	line-height: 1.2;
 }
 
 h6 a,
@@ -739,18 +722,10 @@ h6 a:visited {
 	text-decoration: none;
 }
 
-h6 a:hover {
-	color: var(--amber6);
-	background-color: transparent;
-}
-
-h6 a:active {
-	color: var(--amber6);
-	background-color: transparent;
-}
-
+h6 a:hover,
+h6 a:active,
 h6 a:focus {
-	color: var(--amber6);
+	color: var(--bright-white);
 	background-color: transparent;
 }
 
@@ -814,9 +789,9 @@ nav a {
 
 nav a:link,
 nav a:visited {
-	background: var(--gray10);
+	background: var(--blue-darker);
 	color: var(--white);
-	border: 1px solid var(--gray10);
+	border: 1px solid var(--blue-dark);
 	border-radius: 8px;
 }
 
@@ -851,8 +826,8 @@ nav .sub-menu a {
 }
 
 nav .current-menu-item>a {
-	background: var(--aqua6);
-	color: var(--aqua7);
+	background: var(--blue);
+	color: var(--yellow-light);
 }
 
 nav .current-menu-item>a:hover,
@@ -944,11 +919,14 @@ ol.no-bullets {
 
 ul {
 	list-style-position: inside;
-	font-size: 20px;
 }
 
 ul.no-bullets {
 	list-style-type: none;
+
+	li {
+		padding: 0.5em;
+	}
 }
 
 
@@ -958,6 +936,10 @@ ul.wp-block-list {
 	li {
 		padding: 0.5em;
 	}
+}
+
+.taxonomy-list {
+	padding: 0.5rem 0;
 }
 
 p.special {
@@ -973,14 +955,20 @@ p.special strong {
 	margin-top: 0;
 }
 
-pre,
-code,
-.code {
+pre {
 	padding: 6px;
 	border-radius: 6px;
-	background-color: var(--gray10);
+	background-color: var(--purple-dark);
 	color: var(--white);
 	margin: 1em 0;
+	font-family: var(--mono-family);
+	overflow-x: auto;
+}
+
+code,
+.code {
+	background-color: inherit;
+	color: var(--white);
 	font-family: var(--mono-family);
 	overflow-x: scroll;
 }
@@ -1008,17 +996,39 @@ th {
 	padding: var(--spacing-medium);
 	text-transform: uppercase;
 	background-color: var(--gray90);
-	color: var(--aqua2);
+	color: var(--blue);
 }
 
 tr {
-	background-color: var(--aqua2);
+	background-color: var(--blue);
 	color: var(--white);
 }
 
 tr:nth-child(even) {
-	background-color: var(--aqua3);
+	background-color: var(--blue-dark);
 	color: var(--white);
+}
+
+tbody th {
+	background-color: var(--gray80);
+	color: var(--blue);
+}
+
+tbody th a:link {
+	color: var(--blue);
+}
+
+.wp-block-table.is-style-stripes tbody {
+
+	tr:nth-child(odd) {
+		background-color: var(--blue);
+		color: var(--white);
+	}
+
+	tr:nth-child(even) {
+		background-color: var(--blue-dark);
+		color: var(--white);
+	}
 }
 
 textarea {
@@ -1188,10 +1198,10 @@ textarea {
 	width: 100%;
 }
 
-.sticky-post {
-	padding: var(--spacing-medium);
-	background-color: var(--gray90);
-	color: var(--white);
+.sticky-post,
+.sticky {
+	background-color: var(--purple-dark);
+	color: var(--gray90);
 }
 
 .technology ul {
@@ -1268,7 +1278,7 @@ textarea {
 
 #brand {
 	color: var(--white);
-	text-shadow: 0px 0px 8px var(--aqua6);
+	text-shadow: 0px 0px 8px var(--gray10);
 	background-color: transparent;
 	display: block;
 	padding: 0 0;
@@ -1325,7 +1335,6 @@ section.main .home {
 
 nav.social-links {
 	display: block;
-	vertical-align: top;
 	margin-top: 1em;
 	margin-left: auto;
 	margin-right: auto;
@@ -1360,10 +1369,18 @@ nav.social-links a:active {
 	border: none;
 }
 
-.calls-to-action {
-	background-color: var(--gray20);
-	color: var(--gray90);
+#main .calls-to-action {
+	color: var(--gray20);
+	background-color: var(--yellow-dark);
 	border-radius: var(--spacing-medium);
+
+	.content {
+		margin: 0;
+
+		p {
+			padding: 0;
+		}
+	}
 }
 
 .textwidget p {
@@ -1392,11 +1409,6 @@ nav.social-links a:active {
 	padding: 1em;
 }
 
-.button-dark,
-a.button-dark {
-	background-color: var(--aqua2);
-	color: var(--aqua-light);
-}
 
 .button-light,
 a.button-light {
@@ -1411,20 +1423,12 @@ a.button-light {
 @media screen and (min-width: 320px) {
 
 	body {
-		/* Safari 4-5, Chrome 1-9 */
-		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(var(--gray20)), to(var(--gray90)));
-		/* Safari 5.1, Chrome 10+ */
-		background: -webkit-linear-gradient(top, var(--gray90), var(--gray20));
-		/* Firefox 3.6+ */
-		background: -moz-linear-gradient(top, var(--gray90), var(--gray20));
-		/* IE 10 */
-		background: -ms-linear-gradient(top, var(--gray90), var(--gray20));
-		/* Opera 11.10+ */
-		background: -o-linear-gradient(top, var(--gray90), var(--gray20));
+		background-color: var(--body-bg-color);
+		color: var(--body-text-color);
 	}
 
 	#main {
-		width: 90%;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1580,7 +1584,6 @@ Desktop
 	}
 
 	table {
-		display: block;
 		overflow-x: scroll;
 	}
 
@@ -1598,6 +1601,12 @@ Desktop
 		padding-top: 1em;
 		padding-bottom: 1em;
 		margin: 0 0 1em;
+
+		aside {
+			float: right;
+			margin-left: 1em;
+			margin-right: 0;
+		}
 	}
 
 	.form-info {
@@ -1614,10 +1623,6 @@ Desktop
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	nav {
-		float: left;
 	}
 
 	nav ul {
@@ -1653,7 +1658,8 @@ Desktop
 	}
 
 	#nav {
-		width: 100%;
+		width: 700px;
+		margin-left: auto;
 	}
 
 	#brand img {

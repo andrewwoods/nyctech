@@ -1420,11 +1420,16 @@ a.button-light {
 	border-radius: 4px;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (orientation: portrait) {
 
 	body {
 		background-color: var(--body-bg-color);
 		color: var(--body-text-color);
+		background: url(img/nyc-central-park-foot-bridge-mobile.jpg) no-repeat fixed center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 
 	#main {
@@ -1538,10 +1543,10 @@ Tablet
 /*
 Desktop
 */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
 
 	body {
-		background: url(img/seattle-night-2017-oct.jpg) no-repeat fixed center center;
+		background: url(img/nyc-central-park-foot-bridge.jpg) no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;

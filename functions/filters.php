@@ -2,29 +2,17 @@
 /**
  * Filters
  */
-
-function aquatech_check_title_support() {
+function nyctech_check_title_support() {
 	if ( ! function_exists( '_wp_render_title_tag' ) ||
-	     ! current_theme_supports( 'title-tag' )
+		! current_theme_supports( 'title-tag' )
 	) {
-		add_filter( 'wp_title', 'aquatech_wp_title', 11, 3 );
+		add_filter( 'wp_title', 'nyctech_wp_title', 11, 3 );
 	}
 }
 
-/**
- * Adds a date filter
- *
- * @param string $where clause to limit the query.
- * @return string Description
- * @access public
- */
-function aquatech_recent_posts_where( $where = '' ) {
-	$where .= ' AND post_date > ' . date( 'Y-m-d', strtotime( '-30 days' ) ) . "'";
-	return $where;
-}
 
 
-function aquatech_wp_title( $title, $sep = ' : ', $seplocation = 'left' ) {
+function nyctech_wp_title( $title, $sep = ' : ', $seplocation = 'left' ) {
 
 	// The Site Title under "Settings > General".
 	$site_name = get_bloginfo( 'name' );
@@ -60,7 +48,7 @@ function aquatech_wp_title( $title, $sep = ' : ', $seplocation = 'left' ) {
  *
  * @return array
  */
-function aquatech_body_class_filter( $classes ) {
+function nyctech_body_class_filter( $classes ) {
 	global $post;
 
 	$classes[] = $post->post_name;
@@ -73,5 +61,3 @@ function aquatech_body_class_filter( $classes ) {
 
 	return $classes;
 }
-
-

@@ -28,11 +28,11 @@ $args = array(
 );
 
 $project_technologies_args = $args;
-$project_technologies_args['title_li'] = __('Technologies:', 'aquatech' );
+$project_technologies_args['title_li'] = __( 'Technologies:', 'nyctech' );
 $project_technologies_args['taxonomy'] = 'technology';
 
 $project_contributions_args = $args;
-$project_contributions_args['title_li'] = __( 'Contributions:', 'aquatech' );
+$project_contributions_args['title_li'] = __( 'Contributions:', 'nyctech' );
 $project_contributions_args['taxonomy'] = 'contribution';
 
 

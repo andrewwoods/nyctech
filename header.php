@@ -4,7 +4,7 @@
  *
  * The main file use to create the HTML chrome of the page.
  *
- * @package    AquaTech
+ * @package    NycTech
  * @subpackage HTML
  * @since      5.6.24
  */

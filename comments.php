@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 
 <div class="section" id="respond">
 
-	<h3><?php comment_form_title( __( 'Share Your Thoughts', 'aquatech' ), __( 'Share Your Thoughts on %s', 'aquatech' ) ); ?></h3>
+	<h3><?php comment_form_title( __( 'Share Your Thoughts', 'nyctech' ), __( 'Share Your Thoughts on %s', 'nyctech' ) ); ?></h3>
 	<p>I'd love to hear your thoughts on the article.</p>
 
 	<div id="cancel-comment-reply">
@@ -36,14 +36,14 @@ if ( post_password_required() ) {
 	</div>
 
 	<?php if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) : ?>
-		<p><?php printf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'aquatech'), wp_login_url( get_permalink() ) ); ?></p>
+		<p><?php printf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'nyctech'), wp_login_url( get_permalink() ) ); ?></p>
 	<?php else : ?>
 
 		<form action="<?php echo site_url(); ?>/wp-comments-post.php" method="post" id="commentform">
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-			<p><?php printf(__('Logged in as <a href="%1$s">%2$s</a>.', 'aquatech'), get_edit_user_link(), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php esc_attr_e('Log out of this account'); ?>"><?php _e('Log out &raquo;', 'aquatech'); ?></a></p>
+			<p><?php printf(__('Logged in as <a href="%1$s">%2$s</a>.', 'nyctech'), get_edit_user_link(), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php esc_attr_e('Log out of this account'); ?>"><?php _e('Log out &raquo;', 'nyctech'); ?></a></p>
 
 		<?php else : ?>
 

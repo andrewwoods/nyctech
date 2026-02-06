@@ -1,11 +1,11 @@
 <?php
 /**
-* Sidebar for the Home page
-*
-* @package Aquatech
-* @subpackage Sidebars
-* @author Andrew Woods
-*/
+ * Sidebar for the Home page
+ *
+ * @package NycTech
+ * @subpackage Sidebars
+ * @author Andrew Woods
+ */
 
 ?>
 <aside id="sidebar-home">

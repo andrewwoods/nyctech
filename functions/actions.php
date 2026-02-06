@@ -12,7 +12,7 @@
  *
  * @param WP_Query $query query object to modify.
  */
-function aquatech_modify_main_query( $query ) {
+function nyctech_modify_main_query( $query ) {
 	if ( $query->is_category( array( 'articles', 'journal', 'tutorials' ) ) && $query->is_main_query() ) {
 		$query->query_vars['posts_per_archive_page'] = 4;
 	}
@@ -83,20 +83,20 @@ function get_id_slug() {
  *
  * @return void
  */
-function aquatech_load_js_scripts() {
-	wp_register_script( 'aquatech', get_template_directory_uri() . '/js/aquatech.js', array( 'modernizr' ) );
+function nyctech_load_js_scripts() {
+	wp_register_script( 'nyctech', get_template_directory_uri() . '/js/nyctech.js', array( 'modernizr' ) );
 	// Register the script like this for a theme.
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array() );
 
 	// For either a plugin or a theme, you can then enqueue the script.
 	wp_enqueue_script( 'modernizr' );
-	wp_enqueue_script( 'aquatech' );
+	wp_enqueue_script( 'nyctech' );
 }
 
 /**
  * Load icon sprite file
  */
-function aquatech_load_icomoon() {
+function nyctech_load_icomoon() {
 	$src = get_template_directory_uri() . '/img/my-icons/flaticon.css';
 
 	// Register the script like this for a theme.
@@ -121,7 +121,7 @@ function debug_object( $value ) {
  * @param  WP_Query $query the query object to update.
  * @return WP_Query
  */
-function aquatech_page_blog_posts( $query ) {
+function nyctech_page_blog_posts( $query ) {
 
 	if ( is_page( 'blog' ) ) {
 		$query->set( 'posts_per_page', 5 );
@@ -132,7 +132,7 @@ function aquatech_page_blog_posts( $query ) {
 	return $query;
 }
 
-function aquatech_theme_support() {
+function nyctech_theme_support() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support(

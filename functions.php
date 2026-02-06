@@ -4,13 +4,13 @@ require_once 'functions/actions.php';
 require_once 'functions/filters.php';
 require_once 'functions/sidebars.php';
 
-add_filter( 'body_class', 'aquatech_body_class_filter', 11 );
-add_action( 'wp_enqueue_scripts', 'aquatech_load_js_scripts' );
-add_action( 'wp_enqueue_scripts', 'aquatech_load_icomoon' );
-add_action( 'after_setup_theme', 'aquatech_theme_support' );
-add_action( 'init', 'aquatech_check_title_support' );
+add_filter( 'body_class', 'nyctech_body_class_filter', 11 );
+add_action( 'wp_enqueue_scripts', 'nyctech_load_js_scripts' );
+add_action( 'wp_enqueue_scripts', 'nyctech_load_icomoon' );
+add_action( 'after_setup_theme', 'nyctech_theme_support' );
+add_action( 'init', 'nyctech_check_title_support' );
 
-add_action( 'pre_get_posts', 'aquatech_modify_main_query' );
+add_action( 'pre_get_posts', 'nyctech_modify_main_query' );
 
 /* -------------------------------------------------------------------------- */
 

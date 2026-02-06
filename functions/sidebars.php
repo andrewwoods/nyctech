@@ -8,8 +8,8 @@ register_sidebar(
 		'id' => 'cta',
 		'name' => __( 'Call to Actions', 'aquatech' ),
 		'description' => __( 'Area for Calls to Action', 'aquatech' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>'
+		'before_widget' => '<aside id="%1$s" class="widget calls-to-action %2$s"><div class="content">',
+		'after_widget'  => '</div></aside>',
 	)
 );
 
@@ -32,5 +32,3 @@ register_sidebar(
 		'after_widget'  => '</div>'
 	)
 );
-
-

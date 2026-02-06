@@ -2,7 +2,7 @@
 /**
  * Page Not Found - 404 Error Page
  *
- * @package Aquatech
+ * @package NycTech
  * @subpackage Error Pages
  * @author awoods
  */

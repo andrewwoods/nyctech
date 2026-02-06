@@ -2,7 +2,7 @@
 /**
 * Sidebar for Calls to Action
 *
-* @package Aquatech
+* @package NycTech
 * @subpackage Sidebars
 * @author Andrew Woods
 */

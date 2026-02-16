@@ -1425,7 +1425,7 @@ a.button-light {
 	body {
 		background-color: var(--body-bg-color);
 		color: var(--body-text-color);
-		background: url(img/nyc-central-park-foot-bridge-mobile.jpg) no-repeat fixed center center;
+		background: url(img/bryant-park-snow-2026-winter-mobile.jpg) no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -1546,7 +1546,7 @@ Desktop
 @media screen and (min-width: 768px) and (orientation: landscape) {
 
 	body {
-		background: url(img/nyc-central-park-foot-bridge.jpg) no-repeat fixed center center;
+		background: url(img/bryant-park-snow-2026-winter.jpg) no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;

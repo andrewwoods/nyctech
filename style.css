@@ -1303,6 +1303,13 @@ textarea {
 	clear: both;
 }
 
+footer {
+	.copyright {
+		background-color: var(--blue);
+		color: var(--white);
+	}
+}
+
 #main,
 section.main {
 	width: 100%;

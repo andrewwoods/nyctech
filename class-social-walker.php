@@ -9,7 +9,6 @@
  */
 class Social_Walker extends Walker_Nav_Menu {
 
-
 	/**
 	 * Tell Walker where to inherit it's parent and id values.
 	 *
@@ -111,18 +110,19 @@ class Social_Walker extends Walker_Nav_Menu {
 				$attributes .= ' ' . $attr . '="' . $value . '"';
 			}
 		}
-
+		$args                = (object) $args;
 		list( $name, $size ) = explode( '-', $classes[0] );
+		$size                = isset( $size ) ? $size : 44;
 		$img_url             = $this->class_to_icon_url( $name, $size );
 
 		$item_title = apply_filters( 'the_title', $item->title, $item->ID );
 
-		$item_output  = $args['before'];
+		$item_output  = $args->before;
 		$item_output .= '<a' . $attributes . '>';
 		/**
 		 * This filter is documented in wp-includes/post-template.php
 		 */
-		$item_output .= $args['link_before'];
+		$item_output .= $args->link_before;
 		$item_output .= sprintf(
 			'<img src="%s" height="%d" width="%d" alt="%s">',
 			$img_url,
@@ -130,9 +130,9 @@ class Social_Walker extends Walker_Nav_Menu {
 			$size,
 			$item_title
 		);
-		$item_output .= $args['link_after'];
+		$item_output .= $args->link_after;
 		$item_output .= '</a>';
-		$item_output .= $args['after'];
+		$item_output .= $args->after;
 
 		/**
 		 * Filter a menu item's starting output.
@@ -163,13 +163,10 @@ class Social_Walker extends Walker_Nav_Menu {
 	 */
 	protected function class_to_icon_url( $name, $size = false ) {
 
-		$filename = "{$name}.png";
+		$filename = "icons8-{$name}.png";
 
 		$img_url  = get_template_directory_uri();
 		$img_url .= '/img/social-icons';
-		if ( $size ) {
-			$img_url .= '/' . $size;
-		}
 		$img_url .= '/' . $filename;
 
 		return $img_url;

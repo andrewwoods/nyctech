@@ -317,8 +317,6 @@ li {
 .success,
 .warning,
 .no-comments {
-	background-color: #00309f;
-	color: #d8ebfa;
 	margin: 1em 0;
 	padding: var(--spacing-medium);
 	border-radius: 6px;
@@ -354,6 +352,11 @@ li {
 	background-color: #B49463;
 	color: #F9F9E9;
 	border: none;
+}
+
+.message {
+	background-color: var(--blue-dark);
+	color: #d8ebfa;
 }
 
 .text-left {

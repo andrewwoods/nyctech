@@ -78,7 +78,6 @@ else :
 </div>
 </main>
 
-<?php get_sidebar( 'blog' ); ?>
 
 <?php
 get_footer();

@@ -2,7 +2,7 @@
 Theme Name: NYC Tech
 Author: Andrew Woods
 Author URI: http://andrewwoods.net/
-Version: 1.0.0
+Version: 1.0.1
 Description: A 2026 fork of my Aquatech theme, updated for New York, my forever city.
 */
 
@@ -317,8 +317,6 @@ li {
 .success,
 .warning,
 .no-comments {
-	background-color: #00309f;
-	color: #d8ebfa;
 	margin: 1em 0;
 	padding: var(--spacing-medium);
 	border-radius: 6px;
@@ -354,6 +352,11 @@ li {
 	background-color: #B49463;
 	color: #F9F9E9;
 	border: none;
+}
+
+.message {
+	background-color: var(--blue-dark);
+	color: #d8ebfa;
 }
 
 .text-left {
@@ -1427,17 +1430,13 @@ a.button-light {
 	border-radius: 4px;
 }
 
-@media screen and (min-width: 320px) and (orientation: portrait) {
+body {
+	background: #093C6E;
+	background: linear-gradient(0deg, rgba(9, 60, 110, 1) 0%, rgba(7, 48, 88, 1) 68%, rgba(4, 32, 58, 1) 97%);
+	color: var(--body-text-color);
+}
 
-	body {
-		background-color: var(--body-bg-color);
-		color: var(--body-text-color);
-		background: url(img/bryant-park-snow-2026-winter-mobile.jpg) no-repeat fixed center center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
+@media screen and (min-width: 320px) and (orientation: portrait) {
 
 	#main {
 		width: 100%;
@@ -1552,13 +1551,7 @@ Desktop
 */
 @media screen and (min-width: 768px) and (orientation: landscape) {
 
-	body {
-		background: url(img/bryant-park-snow-2026-winter.jpg) no-repeat fixed center center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
+
 
 	.wrap {
 		width: 300px;

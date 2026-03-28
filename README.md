@@ -13,7 +13,7 @@ my personal website.
 
 ## Version
 
-The current version is 1.0.0. This project uses [semantic versioning](http://semver.org).
+The current version is 1.0.1. This project uses [semantic versioning](http://semver.org).
 
 
 ## Features
@@ -59,5 +59,5 @@ The current version is 1.0.0. This project uses [semantic versioning](http://sem
 
 ## Credits and Acknowledgments
 
-* Project Creator:  [Firstname Lastname](https://example.com)
-* Current Maintainer: [Firstname Lastname](https://example.com)
+* Project Creator:  [Andrew Woods](https://andrewwoods.net)
+* Current Maintainer: [Andrew Woods](https://andrewwoods.net)

@@ -86,7 +86,8 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--spacing-small: 0.25em;
 	--spacing-medium: 0.5em;
 	--spacing-large: 1em;
-	--spacing-xlarge: 1em;
+	--spacing-xlarge: 1.5em;
+	--spacing-xxlarge: 2em;
 
 	--padding-medium: 0.8em;
 
@@ -392,8 +393,6 @@ ol {
 .boxed-blue,
 .boxed-tinted,
 .boxed-special {
-	background: var(--gray10);
-	color: var(--white);
 	margin: 1em 0;
 	padding: 1em;
 }
@@ -431,6 +430,20 @@ ol {
 	background-size: 50% 50%;
 	background-repeat: no-repeat;
 	border: none;
+}
+
+.boxed-category {
+	h1 {
+		color: var(--gray90);
+		background-color: var(--gray10);
+		padding: var(--spacing-medium);
+	}
+
+	p {
+		font-size: 1.2em;
+		margin-top: var(--spacing-large);
+		margin-bottom: var(--spacing-xxlarge);
+	}
 }
 
 .mobile-hide {

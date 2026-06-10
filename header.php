@@ -46,7 +46,7 @@
         <div class="masthead-content">
         <a id="brand" class="" href="<?php echo esc_url(site_url()); ?>"><img
             src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo-ring.png"
-            alt="Andrew Woods Seattle WordPress Developer"/></a>
+            alt="<?php echo get_bloginfo('description'); ?>"/></a>
         <?php
         $main_menu_defaults = [
         'container' => 'nav',

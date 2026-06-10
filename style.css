@@ -1432,8 +1432,8 @@ a.button-light {
 }
 
 body {
-	background: #093C6E;
-	background: linear-gradient(0deg, rgba(9, 60, 110, 1) 0%, rgba(7, 48, 88, 1) 68%, rgba(4, 32, 58, 1) 97%);
+	background: var(--blue-darker);
+	background: linear-gradient(0deg, var(--blue) 0%, var(--blue-dark) 68%, var(--blue-darker) 97%);
 	color: var(--body-text-color);
 }
 

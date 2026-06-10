@@ -11,7 +11,7 @@ get_header();
     $categories = get_the_category();
     $category   = $categories[0];
     ?>
-    <div class="boxed-aqua">
+    <div class="boxed-blue">
         <h1><?php echo $category->cat_name; ?></h1>
         <p><?php echo $category->description; ?></p>
     </div>

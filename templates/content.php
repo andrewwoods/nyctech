@@ -6,7 +6,7 @@
  */
 
 ?>
-<article id="<?php the_ID(); ?>" class="ms-all ml2-ml5 d2-d7 boxed-aqua">
+<article id="<?php the_ID(); ?>" class="ms-all ml2-ml5 d2-d7 boxed-blue">
 <?php if ( is_single() || is_page() ) : ?>
 	<h1><?php the_title(); ?></h1>
 <?php else : ?>
@@ -19,4 +19,3 @@
 		<?php the_content(); ?>
 	</div>
 </article>
-

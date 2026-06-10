@@ -67,20 +67,12 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--blue-dark: rgb(7, 48, 88);
 	--blue-darker: rgb(4, 32, 58);
 	--blue-dark-trans: rgba(9, 60, 110, var(--medium-opacity));
-	--aqua2: #064456;
-	--aqua2-trans: rgba(6, 68, 86, var(--medium-opacity));
-	--aqua3: #096A86;
-	--aqua3-trans: rgba(9, 96, 110, var(--medium-opacity));
-	--aqua7: #00363C;
-	--aqua-light: #A0E8FF;
 
-	--green: #08e955;
+	--green: #008000;
+	--green-dark: #006400;
 	--purple: #BDA6C5;
 	--purple-dark: #36243C;
 	--purple-light: #F4A9FB;
-	--amber5: #EF6238;
-	--amber6: #FF7F60;
-	--orange-dirty: #9A6009;
 
 	--yellow: #E9CB79;
 	--yellow-light: #F0DBA1;
@@ -91,9 +83,10 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 * ==============
 	 */
 
-	--spacing-small: 0.2em;
+	--spacing-small: 0.25em;
 	--spacing-medium: 0.5em;
 	--spacing-large: 1em;
+	--spacing-xlarge: 1em;
 
 	--padding-medium: 0.8em;
 
@@ -118,7 +111,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--mono-third: "Consolas";
 	--mono-family: var(--mono-first), var(--mono-second), var(--mono-third);
 
-	--font-size-default: 16px;
+	--font-size-default: 100%;
 	--line-height-base: 1.6;
 
 
@@ -130,25 +123,38 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--body-font-family: var(--sans-family);
 	--body-font-size: var(--font-size-default);
 	--body-bg-color: var(--blue-darker);
-	--body-text-color: var(--white);
+	--body-text-color: var(--gray10);
 
 	--heading-font-family: var(--serif-family);
+	--heading-text-color: var(--gray10);
+	--heading-bg-color: transparent;
 
 	--code-font-family: var(--mono-family);
 
-	--link-normal-color: lighten(var(--amber6), 10%);
+	--link-normal-color: var(--blue);
 	--link-normal-bgcolor: transparent;
-	--link-visited-color: lighten(var(--amber6), 20%);
+	--link-visited-color: var(--blue-dark);
 	--link-visited-bgcolor: transparent;
-	--link-active-color: var(--red-light);
+	--link-active-color: var(--green);
 	--link-active-bgcolor: var(--white);
-	--link-hover-color: var(--red-light);
+	--link-hover-color: var(--green);
 	--link-hover-bgcolor: var(--white);
-	--link-focus-color: var(--red-light);
+	--link-focus-color: var(--yellow-dark);
 	--link-focus-bgcolor: var(--white);
 
+	--menu-normal-color: var(--gray20);
+	--menu-normal-bgcolor: transparent;
+	--menu-visited-color: var(--gray20);
+	--menu-visited-bgcolor: transparent;
+	--menu-active-color: var(--green);
+	--menu-active-bgcolor: var(--white);
+	--menu-hover-color: var(--green-dark);
+	--menu-hover-bgcolor: var(--white);
+	--menu-focus-color: var(--green-dark);
+	--menu-focus-bgcolor: var(--white);
+
 	--selection-color: var(--grey90);
-	--selection-bgcolor: var(--orange-dirty);
+	--selection-bgcolor: var(--green);
 
 }
 
@@ -159,7 +165,7 @@ html {
 }
 
 body {
-	font-family: var(--body-font-family);
+	font-family: var(--body-font-family), sans-serif;
 	font-weight: initial;
 	line-height: var(--line-height-base);
 }
@@ -264,24 +270,6 @@ ol {
 	}
 }
 
-p,
-div.public-DraftStyleDefault-block {
-	margin: 1em 0;
-	padding: var(--spacing-medium) 0;
-	word-wrap: break-word;
-}
-
-p,
-div.public-DraftStyleDefault-block,
-dl,
-dt,
-dd,
-ol,
-ul,
-li {
-	font-family: var(--body-font-family);
-	font-size: 1.1rem;
-}
 
 .caps {
 	text-transform: uppercase;
@@ -401,16 +389,17 @@ li {
 }
 
 .boxed,
-.boxed-aqua,
+.boxed-blue,
 .boxed-tinted,
 .boxed-special {
-	background: var(--blue-dark);
+	background: var(--gray10);
 	color: var(--white);
 	margin: 1em 0;
 	padding: 1em;
 }
 
-.boxed-aqua {
+
+.boxed-blue {
 	background: var(--blue);
 	border-radius: 16px;
 	border: none;
@@ -434,11 +423,11 @@ li {
 }
 
 .boxed-special {
-	background: var(--aqua2-trans);
-	background: linear-gradient(135deg, transparent 30px, var(--aqua2-trans) 0) top left,
-		linear-gradient(-135deg, transparent 30px, var(--aqua2-trans) 0) top right,
-		linear-gradient(45deg, transparent 30px, var(--aqua2-trans) 0) bottom left,
-		linear-gradient(-45deg, transparent 30px, var(--aqua2-trans) 0) bottom right;
+	background: var(--blue);
+	background: linear-gradient(135deg, transparent 30px, var(--blue) 0) top left,
+		linear-gradient(-135deg, transparent 30px, var(--blue) 0) top right,
+		linear-gradient(45deg, transparent 30px, var(--blue) 0) bottom left,
+		linear-gradient(-45deg, transparent 30px, var(--blue) 0) bottom right;
 	background-size: 50% 50%;
 	background-repeat: no-repeat;
 	border: none;
@@ -467,22 +456,22 @@ li {
 
 ::-moz-selection {
 	color: var(--gray90);
-	background-color: var(--red-light);
+	background-color: var(--green-dark);
 }
 
 ::-webkit-selection {
 	color: var(--gray90);
-	background-color: var(--red-light);
+	background-color: var(--green-dark);
 }
 
 ::-o-selection {
 	color: var(--gray90);
-	background-color: var(--red-light);
+	background-color: var(--green-dark);
 }
 
 ::-ms-selection {
 	color: var(--gray90);
-	background-color: var(--red-light);
+	background-color: var(--green-dark);
 }
 
 ::selection {
@@ -497,7 +486,7 @@ a {
 
 a:link {
 	background-color: transparent;
-	color: var(--yellow);
+	color: var(--blue);
 }
 
 /**
@@ -505,28 +494,28 @@ a:link {
 */
 a:visited {
 	background-color: transparent;
-	color: var(--yellow-light);
+	color: var(--blue-dark);
 }
 
 a:hover {
 	background-color: var(--white);
-	color: var(--blue);
+	color: var(--blue-darker);
 }
 
 a:active {
 	background-color: var(--yellow-light);
-	color: var(--blue-dark);
+	color: var(--blue-darker);
 }
 
 a:focus {
 	background-color: var(--yellow-light);
-	color: var(--blue-dark);
+	color: var(--blue-darker);
 }
 
 
 acronym,
 abbr {
-	color: var(--purple-light);
+	color: var(--purple-dark);
 	text-transform: uppercase;
 	font-size: inherit;
 
@@ -549,13 +538,14 @@ aside {
 	margin: 1em 0;
 }
 
-blockquote {
+blockquote, .wp-block-pullquote {
 	font-size: 1.2em;
-	font-family: var(--serif-family);
+	font-family: var(--serif-family), serif;
 	background-color: var(--blue-dark);
 	color: var(--white);
 	border-radius: 8px;
 	padding: var(--spacing-medium);
+	text-align: start;
 
 	p {
 		margin-top: 0;
@@ -600,32 +590,32 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--heading-font-family);
+	font-family: var(--heading-font-family), serif;
 	line-height: 1.15;
 	margin: var(--spacing-small) 0;
-	color: var(--white);
+	color: var(--gray10);
 }
 
 h1 {
 	font-weight: 700;
 	font-size: 2.49em;
 	margin-top: 0;
-	text-shadow: 0px 0px 4px var(--gray10);
 }
 
 h1 a,
 h1 a:link,
 h1 a:visited {
-	background-color: transparent;
+	background-color: inherit;
+	color: inherit;
 	text-decoration: none;
 }
 
 h1 a:hover,
 h1 a:active,
 h1 a:focus {
-	text-shadow: 0px 0px 4px var(--gray30);
-	background-color: transparent;
-	color: var(--white);
+	background-color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 h2 {
@@ -636,7 +626,7 @@ h2 {
 h2 a,
 h2 a:link,
 h2 a:visited {
-	color: var(--white);
+	color: var(--heading-text-color);
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -644,12 +634,12 @@ h2 a:visited {
 h2 a:hover,
 h2 a:active {
 	background-color: transparent;
-	color: var(--bright-white);
+	color: var(--menu-active-color);
 }
 
 h2 a:focus {
 	background-color: transparent;
-	color: var(--bright-white);
+	color: var(--menu-focus-color);
 }
 
 h3 {
@@ -662,14 +652,14 @@ h3 a:link,
 h3 a:visited {
 	background-color: transparent;
 	text-decoration: none;
-	color: var(--white);
+	color: var(--heading-text-color);
 }
 
 h3 a:hover,
 h3 a:active,
 h3 a:focus {
 	background-color: transparent;
-	color: var(--bright-white);
+	color: var(--);
 }
 
 h4 {
@@ -773,38 +763,40 @@ nav {
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
+	line-height: 1.1;
 }
 
 nav ul {
 	width: 100%;
-	padding: var(--spacing-medium) 0;
+	padding: 0 var(--spacing-medium) ;
 }
 
 nav a {
 	display: inline-block;
-	color: var(--white);
-	padding: var(--spacing-medium);
+	color: var(--gray10);
+	padding: 0 var(--spacing-medium);
 	text-decoration: none;
 	text-transform: uppercase;
+	font-weight: bold;
 	font-size: 1em;
-	font-family: var(--serif-family);
+	font-family: var(--serif-family), serif;
 	width: 100%;
 }
 
 nav a:link,
 nav a:visited {
-	background: var(--blue-darker);
-	color: var(--white);
-	border: 1px solid var(--blue-dark);
-	border-radius: 8px;
+	background: var(--menu-normal-bgcolor);
+	color: var(--menu-normal-color);
+	border: 2px solid transparent;
 }
 
 nav a:hover,
 nav a:active,
 nav a:focus {
-	background: var(--selection-bgcolor);
-	color: var(--white);
-	border: 1px solid var(--white);
+	background: transparent;
+	color: var(--menu-hover-color);
+	border-bottom: 2px solid var(--menu-normal-color);
+	padding-bottom: var(--spacing-small);
 }
 
 nav li {
@@ -830,14 +822,14 @@ nav .sub-menu a {
 }
 
 nav .current-menu-item>a {
-	background: var(--blue);
-	color: var(--yellow-light);
+	background: var(--menu-focus-bgcolor);
+	color: var(--menu-focus-color);
 }
 
 nav .current-menu-item>a:hover,
 nav .current-menu-item>a:active,
 nav .current-menu-item>a:focus {
-	border: 1px solid var(--white);
+	border-bottom: 2px solid var(--menu-active-color);
 }
 
 nav .current_page_ancestor li {
@@ -1163,7 +1155,7 @@ textarea {
 }
 
 .publishing-info {
-	font-family: var(--mono-family);
+	font-family: var(--serif-family), serif;
 }
 
 .publishing-info img {
@@ -1204,8 +1196,13 @@ textarea {
 
 .sticky-post,
 .sticky {
-	background-color: var(--purple-dark);
+	padding: var(--padding-medium);
+	background-color: var(--green-dark);
 	color: var(--gray90);
+
+	h1, h2, h3, h4, h5, h6 {
+		color: inherit;
+	}
 }
 
 .technology ul {
@@ -1281,15 +1278,15 @@ textarea {
 }
 
 #brand {
-	color: var(--white);
-	text-shadow: 0px 0px 8px var(--gray10);
+	color: var(--heading-text-color);
 	background-color: transparent;
-	display: block;
-	padding: 0 0;
-	font-size: 1em;
+	font-size: 1.1em;
 	line-height: 1;
 	text-decoration: none;
-	font-family: var(--sans-family);
+	font-weight: bold;
+	font-family: var(--serif-family), serif;
+	width: 12em;
+	padding-top: 0.1em;
 }
 
 #brand img {
@@ -1301,7 +1298,18 @@ textarea {
 	background-color: transparent;
 	color: var(--white);
 	margin-bottom: var(--spacing-medium);
+
+	display: flex;
+
+	.brand-name {
+
+	}
+
+	.main-nav {
+		margin-left: auto;
+	}
 }
+
 
 #footer {
 	clear: both;
@@ -1309,8 +1317,9 @@ textarea {
 
 footer {
 	.copyright {
-		background-color: var(--blue);
-		color: var(--white);
+		background-color: var(--white);
+		color: var(--gray10);
+		padding: var(--spacing-medium);
 	}
 }
 
@@ -1432,8 +1441,7 @@ a.button-light {
 }
 
 body {
-	background: var(--blue-darker);
-	background: linear-gradient(0deg, var(--blue) 0%, var(--blue-dark) 68%, var(--blue-darker) 97%);
+	background: var(--white);
 	color: var(--body-text-color);
 }
 
@@ -1464,7 +1472,7 @@ body {
 	nav li:focus ul,
 	nav li:hover ul,
 	nav li.is-open ul {
-		background-color: var(--aqua7);
+		background-color: var(--blue);
 	}
 
 	#brand img {
@@ -1487,7 +1495,6 @@ Tablet
 	}
 
 	nav ul {
-		padding: 1em 0 var(--spacing-medium);
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1507,7 +1514,7 @@ Tablet
 	nav li:hover ul,
 	nav li.is-open ul {
 		position: absolute;
-		background-color: var(--aqua7);
+		background-color: var(--blue);
 	}
 
 	nav a {
@@ -1560,7 +1567,7 @@ Desktop
 		position: relative;
 		transform-style: preserve-3d;
 		transition: 0.5s;
-		color: var(--bright-white);
+		color: var(--green);
 	}
 
 	.wrap .face {
@@ -1574,7 +1581,7 @@ Desktop
 		left: 0;
 		width: 100%;
 		height: 100%;
-		color: white;
+		color: var(--yellow-dark);
 		line-height: 50px;
 		text-align: center;
 	}
@@ -1642,7 +1649,7 @@ Desktop
 	}
 
 	nav a {
-		padding: 0.5em;
+		padding: 0 0.5em;
 		width: auto;
 	}
 
@@ -1664,8 +1671,8 @@ Desktop
 	}
 
 	#nav {
-		width: 700px;
 		margin-left: auto;
+		margin-right: 0;
 	}
 
 	#brand img {
@@ -1673,7 +1680,7 @@ Desktop
 	}
 
 	#masthead {
-		width: 758px;
+		width: 60em;
 		margin-left: auto;
 		margin-right: auto;
 	}

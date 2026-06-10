@@ -18,7 +18,7 @@ get_header();
 			endif;
 			?>
 			<?php if ( is_single() ) : ?>
-			<section class="comments ms-all ml2-ml5 d2-d7 boxed-aqua">
+			<section class="comments ms-all ml2-ml5 d2-d7 boxed-blue">
 				<?php comments_template(); ?>
 			</section>
 			<?php endif; ?>
@@ -27,7 +27,7 @@ get_header();
 
 	else :
 	?>
-		<article class="ms-all ml2-ml5 d2-d7 boxed-aqua">
+		<article class="ms-all ml2-ml5 d2-d7 boxed-blue">
 			<h2 class="center">Not Found</h2>
 			<p class="center">Sorry, but you are looking for something that isn't here.</p>
 			<?php get_search_form(); ?>

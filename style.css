@@ -1176,25 +1176,26 @@ textarea {
 
 .publishing-info {
 	font-family: var(--serif-family), serif;
-}
 
-.publishing-info img {
-	float: left;
-	width: 96px;
-	margin-right: var(--spacing-small);
-	margin-bottom: var(--spacing-small);
-}
+	img {
+		float: left;
+		width: 96px;
+		margin-right: var(--spacing-small);
+		margin-bottom: var(--spacing-small);
+	}
 
-.publishing-info .p-author {
-	line-height: 1;
-	display: block;
-	margin-bottom: var(--spacing-small);
-}
+	.p-author {
+		line-height: 1.15;
+		display: block;
+		font-weight: bold;
+		margin-bottom: var(--spacing-small);
+	}
 
-.publishing-info .dt-published {
-	display: block;
-	margin-bottom: var(--spacing-small);
-	font-size: 1rem;
+	.dt-published {
+		display: block;
+		margin-bottom: var(--spacing-small);
+		font-weight: bold;
+	}
 }
 
 .role {

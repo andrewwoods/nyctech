@@ -77,6 +77,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--yellow: #E9CB79;
 	--yellow-light: #F0DBA1;
 	--yellow-dark: #D9B144;
+	--yellow-taxi: #FEAD04;
 
 	/*
 	 * SPACING LEGEND
@@ -162,8 +163,8 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--menu-focus-color: var(--green-dark);
 	--menu-focus-bgcolor: var(--white);
 
-	--selection-color: var(--grey90);
-	--selection-bgcolor: var(--green);
+	--selection-color: var(--grey10);
+	--selection-bgcolor: var(--yellow-taxi);
 
 }
 
@@ -476,28 +477,17 @@ ol {
 }
 
 
-::-moz-selection {
-	color: var(--gray90);
-	background-color: var(--green-dark);
-}
-
-::-webkit-selection {
-	color: var(--gray90);
-	background-color: var(--green-dark);
-}
-
-::-o-selection {
-	color: var(--gray90);
-	background-color: var(--green-dark);
-}
-
+::-moz-selection,
+::-webkit-selection,
+::-o-selection,
 ::-ms-selection {
-	color: var(--gray90);
-	background-color: var(--green-dark);
+	color: var(--selection-color);
+	background-color: var(--selection-bgcolor);
 }
 
-::selection {
-	color: var(--gray90);
+::selection
+{
+	color: var(--selection-color);
 	background-color: var(--selection-bgcolor);
 }
 

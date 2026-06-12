@@ -76,7 +76,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 	--yellow: #E9CB79;
 	--yellow-light: #F0DBA1;
-	--yellow-dark: #D9B144;
+	--yellow-dark: #E1A708;
 	--yellow-taxi: #FEAD04;
 
 	/*
@@ -131,8 +131,8 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 */
 
 	--body-font-family: var(--sans-family);
-	--body-bg-color: var(--blue-darker);
 	--body-font-size: var(--font-default-size);
+	--body-bg-color: var(--bright-white);
 	--body-text-color: var(--gray10);
 
 	--heading-font-family: var(--serif-family);
@@ -140,28 +140,30 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--heading-bg-color: transparent;
 
 	--code-font-family: var(--mono-family);
+	--code-text-color: var(--body-text-color);
+	--code-bg-color: var(--yellow-light);
 
 	--link-normal-color: var(--blue);
 	--link-normal-bgcolor: transparent;
 	--link-visited-color: var(--blue-dark);
 	--link-visited-bgcolor: transparent;
 	--link-active-color: var(--green);
-	--link-active-bgcolor: var(--white);
+	--link-active-bgcolor: var(--body-bg-color);
 	--link-hover-color: var(--green);
-	--link-hover-bgcolor: var(--white);
+	--link-hover-bgcolor: var(--body-bg-color);
 	--link-focus-color: var(--yellow-dark);
-	--link-focus-bgcolor: var(--white);
+	--link-focus-bgcolor: var(--body-bg-color);
 
 	--menu-normal-color: var(--gray20);
-	--menu-normal-bgcolor: transparent;
+	--menu-normal-bgcolor: var(--body-bg-color);
 	--menu-visited-color: var(--gray20);
-	--menu-visited-bgcolor: transparent;
+	--menu-visited-bgcolor: var(--body-bg-color);
 	--menu-active-color: var(--green);
-	--menu-active-bgcolor: var(--white);
+	--menu-active-bgcolor: var(--body-bg-color);
 	--menu-hover-color: var(--green-dark);
-	--menu-hover-bgcolor: var(--white);
+	--menu-hover-bgcolor: var(--body-bg-color);
 	--menu-focus-color: var(--green-dark);
-	--menu-focus-bgcolor: var(--white);
+	--menu-focus-bgcolor: var(--body-bg-color);
 
 	--selection-color: var(--grey10);
 	--selection-bgcolor: var(--yellow-taxi);
@@ -354,8 +356,8 @@ ol {
 }
 
 .message {
-	background-color: var(--blue-dark);
-	color: #d8ebfa;
+	background-color: var(--yellow-dark);
+	color: var(--gray10);
 }
 
 .text-left {
@@ -443,7 +445,7 @@ ol {
 
 .boxed-category {
 	h1 {
-		color: var(--gray90);
+		color: var(--white);
 		background-color: var(--gray10);
 		padding: var(--spacing-medium);
 	}
@@ -543,8 +545,8 @@ q {
 
 aside {
 	width: 50%;
-	background-color: var(--blue-dark);
-	color: var(--white);
+	background-color: var(--gray80);
+	color: var(--body-text-color);
 	font-size: larger;
 	padding: 1em;
 	margin: 1em 0;
@@ -553,8 +555,8 @@ aside {
 blockquote, .wp-block-pullquote {
 	font-size: 1.2em;
 	font-family: var(--serif-family), serif;
-	background-color: var(--blue-dark);
-	color: var(--white);
+	background-color: var(--yellow-light);
+	color: var(--gray20);
 	border-radius: 8px;
 	padding: var(--spacing-medium);
 	text-align: start;
@@ -670,7 +672,7 @@ h3 a:hover,
 h3 a:active,
 h3 a:focus {
 	background-color: transparent;
-	color: var(--);
+	color: var(--menu-focus-color);
 }
 
 h4 {
@@ -690,7 +692,7 @@ h4 a:hover,
 h4 a:active,
 h4 a:focus {
 	background-color: transparent;
-	color: var(--bright-white);
+	color: var(--menu-focus-color);
 }
 
 h5 {
@@ -701,7 +703,7 @@ h5 {
 h5 a,
 h5 a:link,
 h5 a:visited {
-	color: var(--white);
+	color: var(--heading-text-color);
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -709,7 +711,7 @@ h5 a:visited {
 h5 a:hover,
 h5 a:active,
 h5 a:focus {
-	color: var(--bright-white);
+	color: var(--menu-focus-color);
 	background-color: transparent;
 }
 
@@ -722,7 +724,7 @@ h6 {
 h6 a,
 h6 a:link,
 h6 a:visited {
-	color: var(--white);
+	color: var(--heading-text-color);
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -730,7 +732,7 @@ h6 a:visited {
 h6 a:hover,
 h6 a:active,
 h6 a:focus {
-	color: var(--bright-white);
+	color: var(--menu-focus-color);
 	background-color: transparent;
 }
 
@@ -962,7 +964,7 @@ p.special {
 pre {
 	padding: 6px;
 	border-radius: 6px;
-	background-color: var(--purple-dark);
+	background-color: var(--gray20);
 	color: var(--white);
 	margin: 1em 0;
 	font-family: var(--mono-family), monospace;
@@ -1086,7 +1088,7 @@ textarea {
 }
 
 .commentlist {
-	border-top: 2px solid var(--amber5);
+	border-top: 2px solid var(--gray50);
 	list-style-type: none;
 	background-color: transparent;
 	color: var(--white);
@@ -1194,7 +1196,6 @@ textarea {
 }
 
 .role {
-	background-color: var(--amber6);
 	padding-left: var(--spacing-medium);
 	font-family: var(--sans-family), sans-serif;
 	-moz-border-radius: 6px;
@@ -1333,8 +1334,8 @@ textarea {
 
 footer {
 	.copyright {
-		background-color: var(--white);
-		color: var(--gray10);
+		background-color: var(--body-bg-color);
+		color: var(--body-text-color);
 		padding: var(--spacing-medium);
 	}
 }
@@ -1457,7 +1458,7 @@ a.button-light {
 }
 
 body {
-	background: var(--white);
+	background: var(--body-bg-color);
 	color: var(--body-text-color);
 }
 

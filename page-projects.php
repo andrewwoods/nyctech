@@ -13,7 +13,7 @@ if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
 		?>
-		<article class="boxed-blue ms-all ml2-ml5 d3-d6">
+		<article class="boxed ms-all ml2-ml5 d3-d6">
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 		</article>

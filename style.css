@@ -97,14 +97,14 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 * ===========
 	 */
 
-	--sans-second: "Inter";
 	--sans-first: "Fira Sans";
-	--sans-third: Verdana, Tahoma, sans-serif;
+	--sans-second: "Inter";
+	--sans-third: Verdana, Tahoma;
 	--sans-family: var(--sans-first), var(--sans-second), var(--sans-third);
 
-	--serif-first: Didot, "Didot LT STD";
+	--serif-first: "Palatino";
 	--serif-second: "Times New Roman";
-	--serif-third: Georgia, serif;
+	--serif-third: Georgia;
 	--serif-family: var(--serif-first), var(--serif-second), var(--serif-third);
 
 	--mono-first: "Fira Code";
@@ -547,7 +547,7 @@ abbr {
 }
 
 q {
-	font-family: var(--mono-family);
+	font-family: var(--mono-family), monospace;
 	font-size: inherit;
 }
 
@@ -587,7 +587,7 @@ var {
 }
 
 cite {
-	font-family: var(--mono-family);
+	font-family: var(--mono-family), monospace;
 	font-style: normal;
 }
 
@@ -771,7 +771,7 @@ input[type=submit] {
 }
 
 kbd {
-	font-family: var(--mono-family);
+	font-family: var(--mono-family) monospace;
 	font-size: inherit;
 }
 
@@ -895,7 +895,7 @@ nav li.is-open li {
 	padding: var(--spacing-medium);
 	text-decoration: none;
 	font-size: 1em;
-	font-family: var(--sans-family);
+	font-family: var(--sans-family), sans-serif;
 	-moz-border-radius: var(--spacing-small);
 	-webkit-border-radius: var(--spacing-small);
 	border-radius: var(--spacing-small);
@@ -975,7 +975,7 @@ pre {
 	background-color: var(--purple-dark);
 	color: var(--white);
 	margin: 1em 0;
-	font-family: var(--mono-family);
+	font-family: var(--mono-family), monospace;
 	overflow-x: auto;
 }
 
@@ -983,7 +983,7 @@ code,
 .code {
 	background-color: inherit;
 	color: var(--white);
-	font-family: var(--mono-family);
+	font-family: var(--mono-family), monospace;
 	overflow-x: scroll;
 }
 
@@ -1206,7 +1206,7 @@ textarea {
 .role {
 	background-color: var(--amber6);
 	padding-left: var(--spacing-medium);
-	font-family: var(--sans-family);
+	font-family: var(--sans-family), sans-serif;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;

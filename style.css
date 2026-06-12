@@ -112,7 +112,15 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	--mono-third: "Consolas";
 	--mono-family: var(--mono-first), var(--mono-second), var(--mono-third);
 
-	--font-size-default: 100%;
+	--font-h1-size: 3.851rem;
+	--font-h2-size: 3.052rem;
+	--font-h3-size: 2.441rem;
+	--font-h4-size: 1.953rem;
+	--font-h5-size: 1.563rem;
+	--font-h6-size: 1.250rem;
+	--font-default-size: 100%;
+	--font-small-size: 0.80rem;
+
 	--line-height-base: 1.6;
 
 
@@ -122,8 +130,8 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 	 */
 
 	--body-font-family: var(--sans-family);
-	--body-font-size: var(--font-size-default);
 	--body-bg-color: var(--blue-darker);
+	--body-font-size: var(--font-default-size);
 	--body-text-color: var(--gray10);
 
 	--heading-font-family: var(--serif-family);
@@ -162,7 +170,7 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 /* END OF LEGEND */
 
 html {
-	font-size: var(--font-size-default);
+	font-size: var(--font-default-size);
 }
 
 body {
@@ -440,7 +448,8 @@ ol {
 	}
 
 	p {
-		font-size: 1.2em;
+		font-family: var(--heading-font-family), serif;
+		font-size: var(--font-h5-size);
 		margin-top: var(--spacing-large);
 		margin-bottom: var(--spacing-xxlarge);
 	}
@@ -564,7 +573,6 @@ blockquote, .wp-block-pullquote {
 		margin-top: 0;
 		padding-top: 0;
 		font-family: inherit;
-		font-size: larger;
 	}
 }
 
@@ -611,7 +619,7 @@ h6 {
 
 h1 {
 	font-weight: 700;
-	font-size: 2.49em;
+	font-size: var(--font-h1-size);
 	margin-top: 0;
 }
 
@@ -633,7 +641,7 @@ h1 a:focus {
 
 h2 {
 	margin-top: 1rem;
-	font-size: 2.07em;
+	font-size: var(--font-h2-size);
 }
 
 h2 a,
@@ -657,7 +665,7 @@ h2 a:focus {
 
 h3 {
 	margin-top: 1rem;
-	font-size: 1.73em;
+	font-size: var(--font-h3-size);
 }
 
 h3 a,
@@ -677,13 +685,13 @@ h3 a:focus {
 
 h4 {
 	margin-top: 1rem;
-	font-size: 1.44em;
+	font-size: var(--font-h4-size);
 }
 
 h4 a,
 h4 a:link,
 h4 a:visited {
-	color: var(--white);
+	color: var(--heading-text-color);
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -697,7 +705,7 @@ h4 a:focus {
 
 h5 {
 	margin-top: 1rem;
-	font-size: 1.2em;
+	font-size: var(--font-h5-size);
 }
 
 h5 a,
@@ -717,7 +725,7 @@ h5 a:focus {
 
 h6 {
 	margin-top: 1rem;
-	font-size: 1em;
+	font-size: var(--font-h6-size);
 	text-transform: uppercase;
 }
 
@@ -919,7 +927,6 @@ nav li.is-open li {
 
 ol {
 	list-style-position: inside;
-	font-size: 20px;
 }
 
 ol.no-bullets {
@@ -952,13 +959,11 @@ ul.wp-block-list {
 }
 
 p.special {
-	margin: 0 auto;
+	margin: var(--spacing-large) auto;
+	font-size: 1.4rem;
+	font-family: var(--heading-font-family), serif;
 }
 
-p.special strong {
-	color: var(--bright-white);
-	background-color: transparent;
-}
 
 .home p.special {
 	margin-top: 0;
@@ -989,6 +994,14 @@ select {
 strong {
 	font-weight: bold;
 	font-size: inherit;
+}
+
+small {
+	font-size: var(--font-small-size);
+}
+
+sup, sub {
+	font-size: var(--font-small-size);
 }
 
 table {

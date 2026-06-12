@@ -15,7 +15,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 	?>
-		<?php get_template_part('templates/excerpt'); ?>
+		<?php get_template_part('templates/content'); ?>
 	<?php
 		endwhile;
 	else :

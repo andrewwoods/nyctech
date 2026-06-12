@@ -447,7 +447,9 @@ ol {
 	h1 {
 		color: var(--white);
 		background-color: var(--gray10);
-		padding: var(--spacing-medium);
+		padding: var(--spacing-small) var(--spacing-medium) var(--spacing-medium) var(--spacing-small)  ;
+		font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+
 	}
 
 	p {

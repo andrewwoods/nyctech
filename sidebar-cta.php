@@ -8,5 +8,7 @@
 */
 
 ?>
+<section id="sidebar-cta" class="sidebar calls-to-action">
 <?php if ( ! dynamic_sidebar( 'cta' ) ) : ?>
 <?php endif; ?>
+</section>

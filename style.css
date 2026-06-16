@@ -172,15 +172,6 @@ Description: A 2026 fork of my Aquatech theme, updated for New York, my forever 
 
 /* END OF LEGEND */
 
-html {
-	font-size: var(--font-default-size);
-}
-
-body {
-	font-family: var(--body-font-family), sans-serif;
-	font-weight: initial;
-	line-height: var(--line-height-base);
-}
 
 * {
 	margin: 0;
@@ -189,6 +180,18 @@ body {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+html {
+	font-size: var(--font-default-size);
+}
+
+body {
+	font-family: var(--body-font-family), sans-serif;
+	font-weight: initial;
+	line-height: var(--line-height-base);
+	background: var(--body-bg-color);
+	color: var(--body-text-color);
 }
 
 
@@ -1466,10 +1469,6 @@ a.button-light {
 	border-radius: 4px;
 }
 
-body {
-	background: var(--body-bg-color);
-	color: var(--body-text-color);
-}
 
 @media screen and (min-width: 320px) and (orientation: portrait) {
 

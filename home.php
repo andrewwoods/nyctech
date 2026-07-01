@@ -26,7 +26,10 @@ get_header();
 		</article>
 		<?php get_search_form(); ?>
 	<?php
+
 	endif;
+	get_sidebar('home');
+
 	?>
 </div>
 </main>

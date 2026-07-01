@@ -1229,16 +1229,37 @@ textarea {
 	border-radius: 6px;
 }
 
-.sidebar.calls-to-action {
+.sidebar {
+	color: var(--gray20);
+	background-color: var(--sky);
+	border-radius: var(--spacing-medium);
 	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+
+}
+
+.sidebar.calls-to-action {
 	justify-content: space-evenly;
 	width: 300px;
 	margin-left: auto;
 	margin-right: auto;
 
-	.widget_block {
+}
 
+.sidebar.home {
+	justify-content: start;
+	margin-left: auto;
+	margin-right: auto;
+
+	.widget_block {
+		max-width: 50%;
+		padding: var(--spacing-small);
 	}
+}
+
+.wp-block-cover {
+	line-height: 1.5;
 }
 
 .sidebar .photo {
@@ -1278,26 +1299,17 @@ textarea {
 
 .sidebar .widget {
 	width: 100%;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-	background-color: var(--aqua2);
-	border: 1px solid var(--white);
-	color: var(--white);
 	line-height: 1.6em;
-	margin: 0 0 1em;
-	padding: var(--spacing-medium);
 }
 
 .sidebar .widget h1 {
-	color: var(--white);
 	text-shadow: none;
 }
 
 .sidebar .widget h1 a,
 .sidebar .widget h1 a:link,
 .sidebar .widget h1 a:visited {
-	color: var(--aqua2);
+	color: var(--blue-dark);
 }
 
 .sidebar .widget h2 {
@@ -1783,7 +1795,7 @@ Desktop
 		margin: 2em auto 1em;
 	}
 
-	#sidebar-home,
+
 	#sidebar-blog {
 		width: 29.9%;
 		float: right;

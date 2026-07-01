@@ -9,7 +9,7 @@
 
 ?>
 <aside id="sidebar-blog">
-<div class="content">
+<div class="content flex-wrap flex-align-between">
 <?php if ( ! dynamic_sidebar( 'blog' ) ) : ?>
 	&nbsp;
 <?php endif; ?>

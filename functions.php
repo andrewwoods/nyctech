@@ -42,3 +42,29 @@ register_nav_menus(
 		'footer_menu' => 'Footer Menu',
 	)
 );
+
+function nyctech_the_date( $format = '', $before = '', $after = '', $display = true ) {
+	global $currentday, $previousday;
+
+	$the_date = '';
+
+	$the_date = $before . get_the_date( $format ) . $after;
+
+	/**
+	 * Filters the date of the post, for display.
+	 *
+	 * @since 0.71
+	 *
+	 * @param string $the_date The formatted date string.
+	 * @param string $format   PHP date format.
+	 * @param string $before   HTML output before the date.
+	 * @param string $after    HTML output after the date.
+	 */
+	$the_date = apply_filters( 'the_date', $the_date, $format, $before, $after );
+
+	if ( $display ) {
+		echo $the_date;
+	} else {
+		return $the_date;
+	}
+}

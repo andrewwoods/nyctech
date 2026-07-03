@@ -1199,6 +1199,19 @@ textarea {
 
 .publishing-info {
 	font-family: var(--serif-family), serif;
+	display: flex;
+
+	.date-info {
+		flex: 1;
+	}
+
+	.p-summary {
+		flex: 3;
+	}
+
+	p {
+		margin-top: 0;
+	}
 
 	img {
 		float: left;

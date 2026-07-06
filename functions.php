@@ -11,6 +11,7 @@ add_action( 'after_setup_theme', 'nyctech_theme_support' );
 add_action( 'init', 'nyctech_check_title_support' );
 
 add_action( 'pre_get_posts', 'nyctech_modify_main_query' );
+add_action( 'wp_head', 'nyctech_opengraph_tags' );
 
 /* -------------------------------------------------------------------------- */
 

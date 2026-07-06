@@ -55,6 +55,14 @@ The current version is 1.0.1. This project uses [semantic versioning](http://sem
 * [Git Ignore Generator](https://www.gitignore.io/)
 * [Open Source Licenses](http://opensource.org/licenses/GPL-3.0)
 
+### Preferred Date Formats
+
+```
+Y M d D => 2026 Jun 11 Thu
+j F Y => 11 June 2026
+Y-m-d => 2026-06-11
+```
+
 
 
 ## Credits and Acknowledgments

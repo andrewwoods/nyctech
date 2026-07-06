@@ -376,6 +376,18 @@ ol {
 	text-align: right;
 }
 
+.text-serif {
+	font-family: var(--serif-family);
+}
+
+.text-sans {
+	font-family: var(--sans-family);
+}
+
+.text-mono {
+	font-family: var(--mono-family);
+}
+
 .alignnone {
 	float: none;
 	margin: 0;
@@ -420,8 +432,6 @@ ol {
 }
 
 .boxed {
-	font-size: 1.2em;
-	margin: 1em 0;
 	padding: 1em;
 }
 
@@ -571,6 +581,15 @@ blockquote, .wp-block-pullquote {
 		margin-top: 0;
 		padding-top: 0;
 		font-family: inherit;
+		quotes: '"' '"' "'" "'";
+
+		&::before {
+			content: open-quote;
+		}
+
+		&::after {
+			content: close-quote;
+		}
 	}
 }
 
@@ -588,7 +607,6 @@ blockquote, .wp-block-pullquote {
 }
 
 em {
-	color: var(--white);
 	font-style: italic;
 	font-size: inherit;
 }
@@ -976,7 +994,7 @@ ul.wp-block-list {
 }
 
 p.special {
-	margin: var(--spacing-large) auto;
+	margin: var(--spacing-medium) auto;
 	font-size: 1.4rem;
 	font-family: var(--heading-font-family), serif;
 }
@@ -1292,6 +1310,31 @@ textarea {
 	h1, h2, h3, h4, h5, h6 {
 		color: inherit;
 	}
+}
+
+/**
+ * @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ */
+.flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-no-wrap {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.flex-align-around {
+	justify-content: space-around;
+}
+
+.flex-align-between {
+	justify-content: space-between;
+}
+
+.flex-align-evenly {
+	justify-content: space-evenly;
 }
 
 .technology ul {

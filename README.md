@@ -3,12 +3,9 @@
 
 __WordPress theme for a site design refresh__
 
-This is based on Aquatech, the theme I've been using for the past 8 years.
-This provides me the opportunity to make some changes to reflect my new
-location. It gives me time to think about how I'd like to transform how I use
-my personal website.
-
-
+This is a re-imagining of my website theme, where I integrate design elements of
+the city. I'm adapting my personal website to be brought up to modern standards.
+I'm also adding some professionalism, to assist my efforts to be consultant.
 
 
 ## Version

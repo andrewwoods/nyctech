@@ -172,3 +172,7 @@ function nyctech_theme_support() {
 		)
 	);
 }
+
+function nyctech_load_widgets() {
+    register_widget( 'NycTech_Image_Cover_Block' );
+}

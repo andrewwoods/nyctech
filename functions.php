@@ -1,5 +1,7 @@
 <?php
+
 require_once 'class-social-walker.php';
+require_once 'class-image-cover-block.php';
 require_once 'functions/actions.php';
 require_once 'functions/filters.php';
 require_once 'functions/sidebars.php';
@@ -12,6 +14,9 @@ add_action( 'init', 'nyctech_check_title_support' );
 
 add_action( 'pre_get_posts', 'nyctech_modify_main_query' );
 add_action( 'wp_head', 'nyctech_opengraph_tags' );
+
+// Register and load all the widgets.
+add_action( 'widgets_init', 'nyctech_load_widgets' );
 
 /* -------------------------------------------------------------------------- */
 

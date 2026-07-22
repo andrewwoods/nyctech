@@ -133,7 +133,7 @@ function nyctech_load_icomoon() {
  *
  * @param mixed $value the variable to debug.
  */
-function debug_object( $value ) {
+function nyctech_debug_object( $value ) {
 	echo '<pre>';
 	print_r( $value );
 	echo '</pre>';

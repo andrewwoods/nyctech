@@ -27,14 +27,14 @@ add_action( 'widgets_init', 'nyctech_load_widgets' );
  * On the homepage, it add the site description to the site name. On
  * other pages, it add the site name to the standard page title
  *
- * @since 1.0
- * @uses  wp_title filter
- *
- * @param  string $title the title of the page
- * @param  string $sep a separator. one or more characters to divide the
+ * @param string $title the title of the page
+ * @param string $sep a separator. one or more characters to divide the
  *        page title
- * @param  string $seplocation can be 'left' or 'right'. default: left.
+ * @param string $seplocation can be 'left' or 'right'. default: left.
+ *
  * @return string
+ * @since  1.0
+ * @uses   wp_title filter
  */
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

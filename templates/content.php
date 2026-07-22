@@ -6,7 +6,7 @@
  */
 
 ?>
-<article id="<?php the_ID(); ?>" class="ms-all ml2-ml5 d2-d7">
+<article id="<?php the_ID(); ?>">
 <?php if ( ! is_page('home') && ( is_single() || is_page() ) ) : ?>
 	<h1><?php the_title(); ?></h1>
 <?php elseif  ( is_page('home') ) : ?>

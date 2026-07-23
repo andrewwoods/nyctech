@@ -1378,6 +1378,60 @@ textarea {
 	flex-wrap: wrap;
 	align-items: start;
 
+    .widget {
+        width: 100%;
+        line-height: 1.6em;
+    }
+
+    .widget h1 {
+        text-shadow: none;
+    }
+
+    .widget h1 a,
+    .widget h1 a:link,
+    .widget h1 a:visited {
+        color: var(--blue-dark);
+    }
+
+    .widget h2 {
+        font-size: 1.2rem;
+        text-shadow: none;
+    }
+
+    .widget h2 a,
+    .widget h2 a:link,
+    .widget h2 a:visited {
+        color: var(--blue-dark);
+    }
+
+    .widget h3 {
+        color: var(--white);
+        text-shadow: none;
+    }
+
+    .widget h3 a,
+    .widget h3 a:link,
+    .widget h3 a:visited {
+        color: var(--blue-dark);
+    }
+
+    .widget form {
+        border: none;
+        padding: 0;
+    }
+
+    .widget input[type="text"] {
+        width: 100%;
+    }
+
+    .photo {
+        margin-right: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
 }
 
 .sidebar.calls-to-action {
@@ -1389,26 +1443,13 @@ textarea {
 }
 
 .sidebar.home {
-	justify-content: start;
-	margin-left: auto;
-	margin-right: auto;
-
-	.widget_block {
-		max-width: 50%;
-		padding: var(--spacing-small);
-	}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
 }
 
 .wp-block-cover {
 	line-height: 1.5;
-}
-
-.sidebar .photo {
-	margin-right: 0;
-}
-
-.sidebar table {
-	width: 100%;
 }
 
 .sticky-post,
@@ -1463,51 +1504,9 @@ textarea {
 	display: inline;
 }
 
-.sidebar .widget {
-	width: 100%;
-	line-height: 1.6em;
-}
-
-.sidebar .widget h1 {
-	text-shadow: none;
-}
-
-.sidebar .widget h1 a,
-.sidebar .widget h1 a:link,
-.sidebar .widget h1 a:visited {
-	color: var(--blue-dark);
-}
-
-.sidebar .widget h2 {
-	color: var(--white);
-	font-size: 1.2rem;
-	text-shadow: none;
-}
-
-.sidebar .widget h2 a,
-.sidebar .widget h2 a:link,
-.sidebar .widget h2 a:visited {
-	color: var(--aqua2);
-}
-
-.sidebar .widget h3 {
-	color: var(--white);
-	text-shadow: none;
-}
-
-.sidebar .widget h3 a,
-.sidebar .widget h3 a:link,
-.sidebar .widget h3 a:visited {
-	color: var(--aqua3);
-}
-
-.sidebar .widget form {
-	border: none;
-	padding: 0;
-}
-
-.sidebar .widget input[type="text"] {
-	width: 100%;
+.wp-block-cover+h1 {
+	margin-top: var(--spacing-medium);
+	margin-bottom: var(--spacing-medium);
 }
 
 #brand {

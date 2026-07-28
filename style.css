@@ -582,6 +582,18 @@ aside {
 	padding: 1em;
 	margin: 1em 0;
 }
+.widget_custom_html, .wp-block-image-link  {
+    img {
+        width: 100%;
+        display: flex;
+    }
+}
+
+.wp-block-latest-posts {
+
+	a.wp-block-latest-posts__post-title {
+		display: none;
+	}
 
 blockquote, .wp-block-pullquote {
 	font-size: 1.2rem;
@@ -611,7 +623,7 @@ blockquote, .wp-block-pullquote {
 .wp-block-image.size-full {
 
 	img {
-		/*width: 100%;*/
+		width: 100%;
 	}
 
 	figcaption {
@@ -1070,13 +1082,6 @@ nav {
 	height: auto;
 }
 
-ol {
-	list-style-position: inside;
-}
-
-ol.no-bullets {
-	list-style-type: none;
-}
 
 ul {
 	list-style-position: inside;

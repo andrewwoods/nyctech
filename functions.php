@@ -2,6 +2,7 @@
 
 require_once 'class-social-walker.php';
 require_once 'class-image-cover-block.php';
+require_once 'class-image-link-block.php';
 require_once 'functions/actions.php';
 require_once 'functions/filters.php';
 require_once 'functions/sidebars.php';

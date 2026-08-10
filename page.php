@@ -12,7 +12,7 @@ if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
 ?>
-		<article id="<?php the_ID(); ?>" class="h-entry boxed">
+		<article id="<?php the_ID(); ?>" class="h-entry">
 			<h1 class="p-name" ><?php the_title(); ?></h1>
 			<div class="e-content">
 			<?php the_content(); ?>

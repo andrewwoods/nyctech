@@ -20,11 +20,11 @@
         <h1 class="p-name"><?php the_title(); ?></h1>
         <div class="publishing-info clearfix">
             <?php echo get_avatar(get_the_author_meta('ID'), 96, '', get_the_author()); ?>
-            <div class="h-card">
-            <span class="p-author"><?php the_author(); ?></span>
-            </div>
             <a href="<?php the_permalink(); ?>" class="u-url screen-reader-text"><?php the_permalink(); ?></a>
-            <time class="dt-published" datetime="<?php echo the_date('Y-m-d h:i:sP'); ?>"><?php the_time(get_option('date_format')); ?></time>
+            <div class="h-card">
+                <span class="p-author"><?php the_author(); ?></span>
+                <time class="dt-published" datetime="<?php echo the_date('Y-m-d h:i:sP'); ?>"><?php the_time(get_option('date_format')); ?></time>
+            </div>
         </div>
     </header>
     <div class="e-content entry-content content">

@@ -594,7 +594,30 @@ q {
 		display: none;
 	}
 
-blockquote, .wp-block-pullquote {
+}
+
+.about-page-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    justify-content: space-between;
+
+    .text-content {
+        width: 70%;
+        margin-top: 0;
+    }
+
+    .media-content {
+        width: 30%;
+    }
+
+    p.special {
+        margin-top: 0;
+    }
+}
+
+/*blockquote,*/
+.wp-block-pullquote {
 	font-size: 1.2rem;
 	font-family: var(--serif-family), serif;
 	background-color: var(--code-bg-color);
@@ -1478,6 +1501,10 @@ textarea {
 .flex-no-wrap {
 	display: flex;
 	flex-wrap: nowrap;
+}
+
+.flex-align-start {
+    align-items: flex-start;
 }
 
 .flex-align-around {

@@ -85,6 +85,7 @@ Description: Light theme with New York Style for my personal website, with a mor
 	 * ==============
 	 */
 
+    --spacing-none: 0;
 	--spacing-small: 0.25em;
 	--spacing-medium: 0.5em;
 	--spacing-large: 1em;
@@ -218,6 +219,10 @@ a[href$=".doc"][data-size]:after {
 
 a[href$=".xls"][data-size]:after {
 	content: " (XLS, " attr(data-size) ")";
+}
+
+p {
+    margin: var(--spacing-large) var(--spacing-none);
 }
 
 dl {
@@ -375,7 +380,7 @@ ol {
 }
 
 .message {
-	background-color: var(--yellow-dark);
+    background-color: var(--sky);
 	color: var(--gray10);
 }
 
@@ -447,6 +452,8 @@ ol {
 }
 
 .boxed {
+    border: 1px solid var(--gray50);
+    border-right: 1px solid var(--gray50);
 	padding: 1em;
 }
 
@@ -574,14 +581,6 @@ q {
 	font-size: inherit;
 }
 
-aside {
-	width: 50%;
-	background-color: var(--gray80);
-	color: var(--body-text-color);
-	font-size: larger;
-	padding: 1em;
-	margin: 1em 0;
-}
 .widget_custom_html, .wp-block-image-link  {
     img {
         width: 100%;
@@ -746,9 +745,10 @@ cite {
 	}
 }
 
+
 form {
 	padding: var(--spacing-medium);
-	border: 1px solid var(--aqua3);
+    border: 1px solid var(--gray20);
 	width: 100%;
 }
 
@@ -1131,8 +1131,6 @@ pre {
 
 code,
 .code {
-	background-color: inherit;
-	color: var(--white);
 	font-family: var(--mono-family), monospace;
 	overflow-x: scroll;
 }
@@ -1361,9 +1359,9 @@ textarea {
 	}
 
 	.dt-published {
-		display: block;
 		margin-bottom: var(--spacing-small);
 		font-weight: bold;
+        width: auto;
 	}
 }
 
@@ -1439,9 +1437,10 @@ textarea {
 
 }
 
+
+/* Specific Sidebars */
 .sidebar.calls-to-action {
 	justify-content: space-evenly;
-	width: 300px;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -1560,20 +1559,19 @@ footer {
 	}
 }
 
-#main,
+main,
 section.main {
 	width: 100%;
-	max-width: 758px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#main .content,
+main .content,
 section.main .content {
 	margin: var(--spacing-medium) 0;
 }
 
-#main .home,
+main .home,
 section.main .home {
 	background-color: transparent;
 	min-height: 358px;
@@ -1626,10 +1624,8 @@ nav.social-links {
 	}
 }
 
+
 #main .calls-to-action {
-	color: var(--gray20);
-	background-color: var(--yellow-dark);
-	border-radius: var(--spacing-medium);
 
 	.content {
 		margin: 0;
@@ -1638,6 +1634,14 @@ nav.social-links {
 			padding: 0;
 		}
 	}
+}
+
+.home .main-content p {
+    font-size: var(--font-h5-size);
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .textwidget p {
@@ -1649,7 +1653,8 @@ nav.social-links {
 }
 
 .page-content {
-	margin: 1em 0;
+    margin: 1em auto;
+    width: 80%;
 	clear: both;
 }
 
@@ -1758,7 +1763,7 @@ Tablet
 
 @media (min-width: 640px) {
 
-	#main {
+    main {
 		width: 85%;
 		margin-left: auto;
 		margin-right: auto;
@@ -1891,7 +1896,7 @@ Desktop
 		height: auto;
 	}
 
-	#main {
+    main {
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
@@ -1916,6 +1921,7 @@ Desktop
 		width: 60em;
 		margin-left: auto;
 		margin-right: auto;
+        margin-bottom: 3rem;
 	}
 
 	#masthead:before,
@@ -1938,9 +1944,6 @@ Desktop
 		font-size: 1.6em;
 	}
 
-	.home #main p {
-		margin-right: 10px;
-	}
 
 	.home #main p.special {
 		margin-right: auto;
@@ -1961,12 +1964,12 @@ Desktop
 		width: 100%;
 	}
 
-	#main {
+    main {
 		margin: 2em auto 1em;
 	}
 
 
-	#sidebar-blog {
+    aside {
 		width: 29.9%;
 		float: right;
 	}
@@ -1976,4 +1979,21 @@ Desktop
 		margin-left: 0;
 		margin-right: 0;
 	}
+
+    .post-template-default,
+    .page-template-page-blog .page-content {
+        main {
+            float: left;
+            width: 69%;
+            margin-top: 0;
+        }
+
+        aside {
+            float: right;
+        }
+    }
+
+    .p-author {
+        display: block;
+    }
 }

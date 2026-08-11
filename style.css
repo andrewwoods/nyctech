@@ -620,7 +620,7 @@ q {
 .wp-block-pullquote {
 	font-size: 1.2rem;
 	font-family: var(--serif-family), serif;
-	background-color: var(--code-bg-color);
+    background-color: var(--yellow-light);
 	color: var(--gray20);
 	border-radius: 8px;
 	padding: var(--spacing-medium);

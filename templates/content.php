@@ -6,9 +6,11 @@
  */
 
 ?>
-<article id="<?php the_ID(); ?>" class="ms-all ml2-ml5 d2-d7 boxed-aqua">
-<?php if ( is_single() || is_page() ) : ?>
+<article id="<?php the_ID(); ?>">
+<?php if ( ! is_page('home') && ( is_single() || is_page() ) ) : ?>
 	<h1><?php the_title(); ?></h1>
+<?php elseif  ( is_page('home') ) : ?>
+     <!-- Don't display the title for the home page -->
 <?php else : ?>
 	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <?php endif; ?>
@@ -19,4 +21,3 @@
 		<?php the_content(); ?>
 	</div>
 </article>
-

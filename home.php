@@ -15,7 +15,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 	?>
-		<?php get_template_part('templates/excerpt'); ?>
+		<?php get_template_part('templates/content'); ?>
 	<?php
 		endwhile;
 	else :
@@ -26,7 +26,10 @@ get_header();
 		</article>
 		<?php get_search_form(); ?>
 	<?php
+
 	endif;
+	get_sidebar('home');
+
 	?>
 </div>
 </main>

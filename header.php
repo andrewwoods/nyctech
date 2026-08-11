@@ -43,10 +43,7 @@
 <div id="page">
 <div class="page-content">
     <header id="masthead">
-        <div class="masthead-content">
-        <a id="brand" class="" href="<?php echo esc_url(site_url()); ?>"><img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo-ring.png"
-            alt="<?php echo get_bloginfo('description'); ?>"/></a>
+        <a id="brand" class="brand-name" href="<?php echo esc_url(site_url()); ?>">ANDREW WOODS</a>
         <?php
         $main_menu_defaults = [
         'container' => 'nav',
@@ -60,6 +57,5 @@
 
         wp_nav_menu($main_menu_defaults);
         ?>
-        </div>
     </header>
     <!-- [/HEADER]  -->

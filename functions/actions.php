@@ -5,7 +5,32 @@
  * Date: 2018-06-06
  * Time: 19:55
  */
+function nyctech_opengraph_tags() {
+	$title             = '';
+	$site_url          = get_site_url();
+	$image_default_url = get_theme_file_uri( 'img/nyc-skyline-sunny.jpg' );
+	$image_url         = $image_default_url;
 
+	if ( is_home() || is_front_page() ) {
+		$title = get_bloginfo( 'name' );
+	}
+
+	if ( is_singular() ) {
+		$title = esc_html( get_the_title() );
+	}
+
+	if ( $title === '' ) {
+		// Skip writing the Open Graph tags for some pages/urls.
+		return;
+	}
+
+	?>
+	<meta property="og:title" content="<?php echo $title; ?>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<?php echo $site_url; ?>" />
+	<meta property="og:image" content="<?php echo $image_url; ?>" />
+	<?php
+}
 
 /**
  * My function to modify the main query object
@@ -108,7 +133,7 @@ function nyctech_load_icomoon() {
  *
  * @param mixed $value the variable to debug.
  */
-function debug_object( $value ) {
+function nyctech_debug_object( $value ) {
 	echo '<pre>';
 	print_r( $value );
 	echo '</pre>';
@@ -146,4 +171,9 @@ function nyctech_theme_support() {
 			'status',
 		)
 	);
+}
+
+function nyctech_load_widgets() {
+    register_widget( 'NycTech_Image_Cover_Block' );
+    register_widget( 'NycTech_Image_Link_Block' );
 }

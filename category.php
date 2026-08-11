@@ -11,7 +11,7 @@ get_header();
     $categories = get_the_category();
     $category   = $categories[0];
     ?>
-    <div class="boxed-aqua">
+    <div class="boxed-category">
         <h1><?php echo $category->cat_name; ?></h1>
         <p><?php echo $category->description; ?></p>
     </div>
@@ -21,7 +21,7 @@ get_header();
         while ( have_posts() ) :
             the_post();
             ?>
-        <article id="<?php the_ID(); ?>" <?php post_class(['boxed']); ?>>
+        <article id="<?php the_ID(); ?>" <?php post_class(['']); ?>>
             <?php get_template_part('templates/excerpt', 'category'); ?>
             </article>
             <?php if (is_single() ) : ?>

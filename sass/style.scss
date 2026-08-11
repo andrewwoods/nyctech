@@ -21,7 +21,7 @@ Description: A 2026 fork of my Aquatech theme updated for New York, my forever c
 	padding: $spacing-large;
 }
 
-.boxed-aqua {
+.boxed-blue {
 	@extend .boxed;
 	@include rounded-corners-all($aqua3-trans, 16px);
 	border: none;
@@ -1001,5 +1001,3 @@ nav.social-links {
 @import "lib/mobile";
 @import "lib/tablet";
 @import "lib/desktop";
-
-

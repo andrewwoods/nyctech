@@ -8,8 +8,8 @@ register_sidebar(
 		'id' => 'cta',
 		'name'          => __( 'Call to Actions', 'nyctech' ),
 		'description'   => __( 'Area for Calls to Action', 'nyctech' ),
-		'before_widget' => '<aside id="%1$s" class="widget calls-to-action %2$s"><div class="content">',
-		'after_widget'  => '</div></aside>',
+		'before_widget' => '<section id="%1$s" class="%2$s">',
+		'after_widget'  => '</section>',
 	)
 );
 
